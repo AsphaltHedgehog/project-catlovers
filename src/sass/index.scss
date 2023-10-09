@@ -1,2 +1,17 @@
-@import './common';
-@import './example';
+@import './base/common';
+@import './base/container.css';
+
+// 
+
+@import './utils/placeholders.css';
+@import './utils/variables.css';
+
+// 
+
+@import './layout/authorise.css';
+@import './layout/categories.css';
+@import './layout/header.css';
+@import './layout/main.css';
+@import './layout/modal.css';
+@import './layout/support-ukraine.css';
+@import './layout/user-booklist.css';

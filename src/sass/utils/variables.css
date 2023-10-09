@@ -1,0 +1,28 @@
+:root {
+  /* colors */
+  --main-white-color: #FFFFFF;
+  --main-yellow-color: #EAC645;
+  --main-violet-color: #4F2EE8;
+  --main-dark_gray-color: #202024;
+  --main-black-color: #111111;
+  /* font-size */
+  --font-size-header_nav: 14px;
+  --font-size-header_account: 22px;
+  --font-size-categories: 16px;
+  --font-size-support_header: 24px;
+  --font-size-main_header: 32px;
+
+  --font-size-cards_name: 16px;
+  --font-size-cards_author: 12px;
+  --font-size-cards_genres: 12px;
+  --font-size-cards_text: 14px;
+  --font-size-main-btn_more: 14px;
+  --font-size-main-btn_shopping: 14px;
+  /* fonts-size pc*/
+  --pc-font-size-main-btn_shopping: 14px;
+  --pc-font-size-categories:18px;
+  --pc-font-size-main_header: 48px;
+  --pc-font-size-main-categories_headers: 14px;
+  /* pagination */
+
+}
