@@ -41,14 +41,15 @@
   /* Transition */
   --transition-duration: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    /* Amazon Logo*/
-    --amazon-logo: grayscale(100%);
+  /* Amazon Logo*/
+  --amazon-logo: grayscale(100%);
 
-    /* Sign In Modal */
-    --icon-color: #111111;
+  /* Sign In Modal */
+  --icon-color: #111111;
 }
 
 body {
   font-family: 'DM Sans', sans-serif;
   background-color: #f6f6f6;
-  }
+  /* не забудь убрать бэкграунд колор */
+}
