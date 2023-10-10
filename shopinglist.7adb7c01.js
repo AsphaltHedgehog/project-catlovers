@@ -1,2 +1,0 @@
-const t=document.querySelector(".support-arrow-container"),e=document.querySelector(".support-list");let o=!0;t.addEventListener("click",(c=>{c.preventDefault(),o?(o=!o,e.scrollIntoView({block:"end",behavior:"smooth"}),t.classList.add("up")):(o=!0,e.scrollIntoView({block:"start",behavior:"smooth"}),t.classList.remove("up"))})),function(){const t=document.querySelectorAll(".link-nav");let e=window.location.pathname;console.log(e),t.forEach((function(t){let o=t.getAttribute("href");e===o&&t.classList.add("current")}))}();
-//# sourceMappingURL=shopinglist.7adb7c01.js.map
