@@ -86,7 +86,7 @@
 }
 
 .text-btn {
-  color: #fff;
+  color: var(--main-white-color);
   font-family: DM Sans;
   font-size: 14px;
   font-style: normal;
@@ -117,20 +117,3 @@
 .icon-mobile-menu {
   stroke: var(--main-black-color);
 }
-
-/* .current {
-  position: relative;
-  color: #404bbf;
-}
-
-.current::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #404bbf;
-
-  bottom: -1px;
-  position: absolute;
-} */
