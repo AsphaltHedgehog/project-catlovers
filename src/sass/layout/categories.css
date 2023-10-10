@@ -4,8 +4,7 @@
 
 .categories-select-wrapper {
   height: 228px;
-  min-width: 310px;
-  max-width: 335px;
+  width: 335px;
   overflow: auto;
 }
 
