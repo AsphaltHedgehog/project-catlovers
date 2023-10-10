@@ -1,0 +1,30 @@
+/* container */
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+/*Mobile styles */
+
+@media only screen and (max-width: 767.98px) {
+  .container {
+    max-width: 375px;
+    padding: 0 20px;
+  }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) and (max-width: 1439.98px) {
+  .container {
+    max-width: 768px;
+
+    padding: 0 32px;
+  }
+}
+/* Dasktop styles */
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 24px;
+  }
+}
