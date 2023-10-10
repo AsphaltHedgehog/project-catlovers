@@ -27,6 +27,11 @@
   --pc-font-size-main-categories_headers: 14px;
   /* pagination */
 
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #f6f6f6;
+  }
+
   
 
   /* Library: text-above-card, author;
@@ -48,5 +53,3 @@
 
     /* Sign In Modal */
     --icon-color: #111111;
-
-
