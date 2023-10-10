@@ -1,33 +1,61 @@
-// Підключення Firebase
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/database';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 
-// Налаштування Firebase
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_AUTH_DOMAIN',
-  databaseURL: 'YOUR_DATABASE_URL',
-  projectId: 'YOUR_PROJECT_ID',
-  storageBucket: 'YOUR_STORAGE_BUCKET',
-  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
-  appId: 'YOUR_APP_ID',
+  apiKey: 'AIzaSyC-hK1nxM1T3u1hh50vVCbX9OHhQUAr11U',
+  authDomain: 'my-first-project-3417b.firebaseapp.com',
+  projectId: 'my-first-project-3417b',
+  storageBucket: 'my-first-project-3417b.appspot.com',
+  messagingSenderId: '770383438778',
+  appId: '1:770383438778:web:d1dd182fe2f7a1262e3383',
+  measurementId: 'G-9Y6VC584MT',
 };
 
-// Ініціалізація Firebase
-firebase.initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth();
 
-// Елементи DOM
-const loginButton = document.getElementById('loginButton');
-const modal = document.getElementById('modal');
-const closeModalButton = document.getElementById('closeModalButton');
-
-// Подія при кліку на кнопку входу
-loginButton.addEventListener('click', () => {
-  modal.style.display = 'block';
+// Detect auth state
+onAuthStateChanged(auth, user => {
+  const headerEl = document.getElementById('header');
+  if (user !== null) {
+    // Add code to display header for authenticated user
+    headerEl.innerHTML = `
+      <div>
+        <img src="logo.png" alt="Logo">
+        <span>${user.displayName}</span>
+        <button onclick="logout()">Log out</button>
+      </div>
+    `;
+  } else {
+    // Add code to display header for unauthenticated user
+    headerEl.innerHTML = `
+      <div>
+        <img src="logo.png" alt="Logo">
+        <button onclick="openModal()">Login</button>
+      </div>
+    `;
+  }
 });
 
-// Подія при кліку на кнопку закриття модального вікна
-closeModalButton.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
+function openModal() {
+  // Add code to open the authentication modal
+  const modalEl = document.getElementById('modal');
+  modalEl.style.display = 'block';
+}
+
+function logout() {
+  // Add code to log out the user
+  signOut(auth)
+    .then(() => {
+      console.log('user logged out');
+    })
+    .catch(error => {
+      console.log('logout error', error);
+    });
+}
