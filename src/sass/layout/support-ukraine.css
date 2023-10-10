@@ -67,11 +67,6 @@
   letter-spacing: -0.56px;
 }
 
-/* .support-link:hover .support-img,
-.support-link:active .support-img {
-  fill: yellow;
-} */
-
 .support-img {
   mix-blend-mode: luminosity;
   filter: brightness(0) invert(1);
@@ -83,6 +78,7 @@
   margin: 0 auto;
   border-radius: 50px;
   background-color: var(--main-white-color);
+  transition: 0.5s ease;
 }
 
 .up {
