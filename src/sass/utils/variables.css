@@ -27,13 +27,6 @@
   --pc-font-size-main-categories_headers: 14px;
   /* pagination */
 
-body {
-  font-family: 'DM Sans', sans-serif;
-  background-color: #f6f6f6;
-  }
-
-  
-
   /* Library: text-above-card, author;
   Shopping-list: category, author; 
   Placeholder: author*/
@@ -53,3 +46,9 @@ body {
 
     /* Sign In Modal */
     --icon-color: #111111;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #f6f6f6;
+  }
