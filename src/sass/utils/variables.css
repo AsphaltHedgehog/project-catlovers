@@ -1,8 +1,8 @@
 :root {
   /* colors */
-  --main-white-color: #FFFFFF;
-  --main-yellow-color: #EAC645;
-  --main-violet-color: #4F2EE8;
+  --main-white-color: #ffffff;
+  --main-yellow-color: #eac645;
+  --main-violet-color: #4f2ee8;
   --main-dark_gray-color: #202024;
   --main-black-color: #111111;
   /* Body background */
@@ -22,10 +22,11 @@
   --font-size-main-btn_shopping: 14px;
   /* fonts-size pc*/
   --pc-font-size-main-btn_shopping: 14px;
-  --pc-font-size-categories:18px;
+  --pc-font-size-categories: 18px;
   --pc-font-size-main_header: 48px;
   --pc-font-size-main-categories_headers: 14px;
   /* pagination */
+
   
 
   /* Library: text-above-card, author;
@@ -47,4 +48,5 @@
 
     /* Sign In Modal */
     --icon-color: #111111;
-}
+
+
