@@ -4,7 +4,6 @@ let statusBtn = true;
 
 btn.addEventListener('click', e => {
   e.preventDefault();
-  console.log('first');
 
   if (statusBtn) {
     statusBtn = !statusBtn;
