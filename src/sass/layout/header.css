@@ -2,6 +2,7 @@
   border-radius: 0px 0px 8px 8px;
   border: 1.5px solid var(--main-black-color);
   background: var(--main-white-color);
+  margin-bottom: 40px;
 }
 
 .header-container {
@@ -116,4 +117,11 @@
 
 .icon-mobile-menu {
   stroke: var(--main-black-color);
+}
+
+.current {
+  font-weight: 700;
+  background: var(--main-yellow-color);
+  border-radius: 36px;
+  padding: 8px 16px 8px 16px;
 }
