@@ -1,2 +1,2 @@
-import categories from './js/categories'
+import './js/categories'
 
