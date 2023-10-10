@@ -1,0 +1,119 @@
+.header-section {
+  border-radius: 0px 0px 8px 8px;
+  border: 1.5px solid var(--main-black-color);
+  background: var(--main-white-color);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-link-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-link-logo {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .header-link-logo {
+    margin-right: 76px;
+  }
+}
+
+.list-nav {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .list-nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+}
+
+.link-nav {
+  color: var(--main-black-color);
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+
+  padding: 10px 0;
+}
+
+.link-nav-second {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header-btn {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+
+    border-radius: 18px;
+    border: 1.5px solid var(--main-black-color);
+    background: var(--main-violet-color);
+    cursor: pointer;
+
+    padding: 14px;
+
+    width: 184px;
+    height: 48px;
+  }
+}
+
+.text-btn {
+  color: var(--main-white-color);
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+}
+.icon-btn {
+  stroke: var(--main-yellow-color);
+}
+
+.mobile-menu-btn {
+  display: flex;
+  margin-left: auto;
+  padding: 10px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+.icon-mobile-menu {
+  stroke: var(--main-black-color);
+}
