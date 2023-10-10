@@ -42,6 +42,8 @@
   text-align: left;
 
   font-size: var(--font-size-categories);
+  color: var(--main-black-color);
+  opacity: 0.6;
 }
 
 .categories-list-el:hover {
