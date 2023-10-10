@@ -1,0 +1,30 @@
+@media screen {
+  
+}
+
+.categories-select-wrapper {
+  height: 228px;
+  width: 335px;
+}
+
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+.categories-active {
+  color: var(--main-violet-color);
+  text-transform: uppercase;
+}
+
+.categories-list-el {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.categories-list-el:hover {
+  color: orange;
+}
