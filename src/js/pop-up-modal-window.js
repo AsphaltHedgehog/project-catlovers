@@ -2,6 +2,7 @@ import { FetchBooks } from './booksApi';
 import { renderBookInfo } from './pop-up-modal-rendering';
 
 const books = document.querySelector('.top-books');
+console.log();
 if (books) {
   books.addEventListener('click', async event => {
     const bookCard = event.target.closest('li.js-book-modal');
@@ -23,12 +24,11 @@ if (books) {
         ?.url,
       apple_link: book_json.buy_links.find(link => link.name === 'Apple Books')
         ?.url,
-      bookshop_link: book_json.buy_links.find(link => link.name === 'Bookshop')
-        ?.url,
     };
 
     const BOOKS_STORAGE = 'books';
     const popup = document.createElement('div');
+    //  document.createElement('div');
 
     popup.innerHTML = renderBookInfo(book_data, isInShoppingList(bookId));
     document.body.appendChild(popup);
