@@ -1,8 +1,7 @@
 // function addCurentLinkNewClass() {
     
-//     const linkEl = document.querySelectorAll('.link-nav');
-//     let path = window.location.pathname; 
-//     console.log(path);
+    const linkEl = document.querySelectorAll('.link-nav');
+    let path = window.location.pathname; 
     
 //     linkEl.forEach(function (link) {
 //         let linkPath = link.getAttribute('href');

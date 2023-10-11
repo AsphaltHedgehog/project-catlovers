@@ -64,6 +64,10 @@
   gap: 4px;
 }
 
+.icon-nav {
+  fill: var(--main-black-color);
+}
+
 .header-btn {
   display: none;
 }

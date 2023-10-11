@@ -1,17 +1,106 @@
 .modal-mobile {
   display: none;
   position: fixed;
-  top: 66px;
+  top: 0px;
   left: 0;
-  z-index: 1;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    189.32% 190.93% at 59.76% -23.42%,
-    #4f2ee8 18.03%,
-    #fff 100%
-  );
+  padding: 84px 0 0 0;
+  background: url(/src/images/background/mobile-background_mob.png),
+    radial-gradient(
+      189.32% 190.93% at 59.76% -23.42%,
+      #4f2ee8 18.03%,
+      #fff 100%
+    );
+
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
 }
+
+@media only screen and (min-resolution: 192dpi) {
+  .modal-mobile {
+    background-image: url(/src/images/background/mobile-background_mob@2x.png),
+      radial-gradient(
+        189.32% 190.93% at 59.76% -23.42%,
+        #4f2ee8 18.03%,
+        #fff 100%
+      );
+  }
+}
+
+.modal-btn-sign {
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+
+  border-radius: 18px;
+  border: 1.5px solid var(--main-white-color);
+  background: none;
+  cursor: pointer;
+
+  padding: 14px;
+  margin-bottom: 130px;
+
+  width: 184px;
+  height: 48px;
+}
+.modal-text-btn {
+  color: var(--main-white-color);
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+}
+.modal-icon-btn {
+  stroke: var(--main-yellow-color);
+}
+.modal-main-nav {
+  display: flex;
+}
+.modal-list-nav {
+  margin: 0 auto;
+}
+.modal-item-nav {
+  margin-bottom: 25px;
+}
+
+.modal-item-nav:last-child {
+  margin-bottom: o;
+}
+.modal-link-nav {
+  color: var(--main-white-color);
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+
+  padding: 10px 0;
+}
+.modal-link-nav-second {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.modal-icon-nav {
+  fill: var(--main-white-color);
+}
+
+.current-modal {
+  font-weight: 700;
+  color: var(--main-black-color);
+  background: var(--main-yellow-color);
+  border-radius: 36px;
+  padding: 8px 16px 8px 16px;
+}
+
+/* .modal-conteiner {
+  max-width: 767px;
+  padding: 20px 0;
+} */
