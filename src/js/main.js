@@ -1,48 +1,67 @@
-import { BookShelf } from './booksApi.js';
+import { FetchBooks } from './booksApi.js';
+import renderBookCards from './renderBookCards.js'
 
-const bookShelf = new BookShelf();
-const book = {};
-const bookListEl = document.querySelector('.books-content');
+const bookShelf = new FetchBooks;
+// const book = {};
+// const bookListEl = document.querySelector('.books-content');
 
-bookShelf
-  .topBooks(book)
-  .then(topBooks => {
-    const markup = bookTemplate(threeGenrs(topBooks.data));
-    bookListEl.insertAdjacentHTML('beforeend', markup);
-  })
-  .catch(err => {
-    console.log(err);
-  });
 
-function threeGenrs(arr) {
-  const geners = [];
-  for (let index = 0; index <= 3; index += 1) {
-    geners.push(arr[index]);
+async function fetchBooks() {
+  try {
+    const response = await bookShelf.fetchTopBooks();
+
+    renderBookCards(response.data)
+
+    // await populateGenresList(response.data);
+  } catch (error) {
+    console.error(error);
+    // need notiflix or placeholder for errors
   }
-  return geners;
 }
 
-function bookTemplate(bookList) {
-  return `<li class="card book-item" data-id='${bookList[0].books[0]._id}'>
-    <p class="main-categories">'${bookList[0].books[0].list_name}'</p>
-     <a href='${bookList[0].books[0].book_image}' class="card-link js-card-link">
-      <img src='${bookList[0].books[0].book_image}'
-        loading='lazy'
-        width='335'
-        height='485'
-      />
-    </a>
-    <p class="main-title">'${bookList[0].books[0].title}'</p>
-    <p class="main-autor">'${bookList[0].books[0].author}'</p>
-</li>
- <button type="button" class="main-btn">see more</button>
-   `;
-}
+fetchBooks()
 
-function renderBooks(books) {
-  const markup = books.map(bookTemplate).join('');
-  bookListEl.insertAdjacentHTML = markup;
-}
+// bookShelf
+//   .topBooks(book)
+//   .then(topBooks => {
+//     const markup = bookTemplate(threeGenrs(topBooks.data));
+//     bookListEl.insertAdjacentHTML('beforeend', markup);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
+
+// function threeGenrs(arr) {
+//   const geners = [];
+//   for (let index = 0; index <= 3; index += 1) {
+//     geners.push(arr[index]);
+//   }
+//   return geners;
+// }
+
+// function bookTemplate(bookList) {
+//   return `<li class="card book-item" data-id='${bookList[0].books[0]._id}'>
+//     <p class="main-categories">'${bookList[0].books[0].list_name}'</p>
+//      <a href='${bookList[0].books[0].book_image}' class="card-link js-card-link">
+//       <img src='${bookList[0].books[0].book_image}'
+//         loading='lazy'
+//         width='335'
+//         height='485'
+//       />
+//     </a>
+//     <p class="main-title">'${bookList[0].books[0].title}'</p>
+//     <p class="main-autor">'${bookList[0].books[0].author}'</p>
+// </li>
+//  <button type="button" class="main-btn">see more</button>
+//    `;
+// }
+
+// function renderBooks(books) {
+//   const markup = books.map(bookTemplate).join('');
+//   bookListEl.insertAdjacentHTML = markup;
+// }
+// ==============================================================================================
+
 // const bookApi = new BookShelf();
 // export async function renderSectionBooksGenre(genreName, categoryName) {
 //   document.querySelector('.books-content').innerHTML = '';
