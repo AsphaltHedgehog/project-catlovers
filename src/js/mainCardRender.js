@@ -1,7 +1,5 @@
 function cardRender(books, length) {
   let markup = '';
-  const asdasdad = document.querySelector('.top-books')
-  console.log(length);
   for (let i = 0; i < length; i += 1) {
     const { _id,book_image ,title, author } = books[i];
     
