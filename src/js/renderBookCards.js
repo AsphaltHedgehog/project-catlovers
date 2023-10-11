@@ -3,9 +3,10 @@ import renderCard from './mainCardRender.js';
 
 async function renderCards(data) {
   // best seller books title
-  const box = document.querySelector('.books-content');
-  box.insertAdjacentHTML("beforebegin", '<h2 class= "main-title"> Best Sellers <span span class= "main-header-color"> Books</span ></h2>'
-  );
+  const box = document.querySelector('.top-books');
+  box.insertAdjacentHTML("beforebegin",
+    '<h2 class="main-title">Best Sellers<span class="color-accent">Books</span></h2>'
+  )
   // ебучие циклы
   const fragment = document.createDocumentFragment();
   try {

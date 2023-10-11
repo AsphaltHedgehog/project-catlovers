@@ -1,3 +1,4 @@
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -5,6 +6,8 @@
   width: 100%;
   height: 100%;
   z-index: 100;
+  
+  
 
   background-color: hsla(0, 0%, 7%, 0.4);
 
@@ -26,7 +29,7 @@
 
 .backdrop__modal {
   opacity: 1;
-
+  
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
   transition-property: transform, opacity;
@@ -38,6 +41,7 @@
 }
 
 .book-card__modal {
+  
   position: absolute;
   top: 5vh;
   left: 50%;
@@ -47,20 +51,30 @@
   display: flex;
   flex-direction: column;
   padding: 40px 24px;
-  width: 287px;
+  width: 335px;
+  height: auto;
 
   outline: 2px solid var(--main-black-color);
   border-radius: 18px;
   background-color: var(--main-white-color);
 
   @media screen and (min-width: 768px) and (max-width: 1439.98px) {
+    background-color: var(--main-white-color);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 
     max-width: 579px;
     width: 100%;
-    // height: 465px;
+    
+   height: auto;
+  }
+  @media only screen and (min-width: 1440px) {
+    max-width: 579px;
+    height: auto;
+    width: 100%;
+    left: 50%;
+    top: 25%;
   }
 }
 
@@ -75,24 +89,30 @@
 
   width: 24px;
   height: 24px;
-
-  background-color: var(--main-white-color);
+background: none;
+  // background-color: var(--main-white-color);
   border: none;
+  .img {
+    max-width: none;
+  }
 
   @media screen and (min-width: 768px) and (max-width: 1439.98px) {
-    width: 28px;
-    height: 28px;
+    
     top: 24px;
     right: 24px;
+  }
+  @media only screen and (min-width: 1440px) {
+    width: 28px;
+    height: 28px;
   }
 }
 
 .close__icon {
-  width: 24px;
-  height: 24px;
+  max-width: 24px;
+  max-height: 24px;
 
   stroke: var(--main-black-color);
-  fill: var(--body-background);
+  fill: var(--main-black-color);
   transition-property: fill;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
@@ -106,12 +126,24 @@
     width: 28px;
     height: 28px;
   }
+  @media only screen and (min-width: 1440px) {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .book-card {
+  display: flex;
+  flex-direction: column;
   @media screen and (min-width: 768px) and (max-width: 1439.98px) {
     display: flex;
+    flex-direction: row;
   }
+  @media only screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+  }
+  
 }
 
 .book-info {
@@ -136,14 +168,24 @@
     margin-right: 24px;
     margin-bottom: 40px;
   }
+  @media only screen and (min-width: 1440px) {
+    max-width: 192px;
+    width: 100%;
+    height: 281px;
+    margin-right: 24px;
+    margin-bottom: 40px;
+  }
 }
 
 .book-card__img {
   border-radius: 8px;
   overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 .book-title {
+  font-family: DM Sans;
   max-width: 300px;
   margin-bottom: 4px;
   font-style: normal;
@@ -203,7 +245,7 @@
   margin-bottom: 40px;
 }
 
- /* .shops-item {
+/* .shops-item {
 
   } */
 
@@ -242,13 +284,17 @@
 }
 
 .book-card__btn {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
 }
 
 .card__btn {
-  width: 211px;
+  min-width: 211px;
+  max-width: 279px;
   height: 46px;
-  margin-bottom: 10px;
+  // padding: 14px;
+  // margin-bottom: 10px;
 
   border: 2px solid var(--main-violet-color);
   border-radius: 40px;
@@ -269,26 +315,40 @@
 
   &:hover {
     background-color: var(--main-violet-color);
-    color: var(--main-black-color);
+    color: var(--main-white-color);
   }
 
   @media screen and (min-width: 768px) and (max-width: 1439.98px) {
-    width: 499px;
+    min-width: 499px;
+    max-width: 95%;
     height: 64px;
+    // padding: 20px;
     font-size: 18px;
     line-height: calc(24 / 18);
+  }
+  @media only screen and (min-width: 1440px) {
+    min-width: 499px;
+    max-width: 95%;
+    height: 64px;
   }
 }
 
 .congrat-text {
+  padding-top: 8px;
   margin: 0 auto;
   font-size: 12px;
   line-height: calc(14 / 12);
   text-align: center;
   letter-spacing: -0.04em;
   color: rgba(17, 17, 17, 0.5);
+  width: 242px;
 
   @media screen and (min-width: 768px) and (max-width: 1439.98px) {
+    font-size: 10px;
+    line-height: calc(12 / 10);
+    width: 328px;
+  }
+  @media only screen and (min-width: 1440px) {
     font-size: 10px;
     line-height: calc(12 / 10);
     width: 328px;
