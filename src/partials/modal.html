@@ -1,0 +1,1 @@
+<div id="myModal" class="modal"></div>

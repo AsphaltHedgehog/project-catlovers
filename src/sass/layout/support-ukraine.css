@@ -1,0 +1,115 @@
+.support-container {
+  padding: 0 40px;
+  border-radius: 16px;
+  background: radial-gradient(
+    189.32% 190.93% at 59.76% -23.42%,
+    var(--main-violet-color) 18.03%,
+    var(--main-white-color) 100%
+  );
+  box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
+
+  font-family: DM Sans;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .support-container {
+    width: 335px;
+    height: 460px;
+  }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) and (max-width: 1439.98px) {
+  .support-container {
+    width: 335px;
+    height: 474px;
+  }
+}
+
+/* Dasktop styles */
+@media screen and (min-width: 1440px) {
+  .support-container {
+    width: 356px;
+    height: 474px;
+  }
+}
+
+.support-title-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  padding-top: 24px;
+  align-items: center;
+}
+
+.support-title-container h3 {
+  color: var(--main-white-color);
+  font-size: var(--font-size-support_header);
+  font-weight: 700;
+  line-height: 24px; /* 109.091% */
+  letter-spacing: -0.88px;
+}
+
+.simbol-svg {
+  fill: var(--main-white-color);
+}
+
+.support-list-container {
+  height: 292px;
+  margin-bottom: 20px;
+
+  overflow: hidden;
+}
+
+.support-list {
+  display: inline-flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.support-list-item {
+}
+
+.item-container {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.support-list-item p {
+  color: var(--main-white-color);
+  font-size: var(--font-size-cards_text);
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.56px;
+}
+
+.support-img {
+  mix-blend-mode: luminosity;
+  filter: brightness(0) invert(1);
+}
+
+.support-arrow-container {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: var(--main-white-color);
+  transition: 0.5s ease;
+}
+
+.up {
+  transform: rotate(180deg);
+}
+
+.arrow-svg {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  fill: var(--main-violet-color);
+}

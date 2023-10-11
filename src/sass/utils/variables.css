@@ -1,15 +1,17 @@
 :root {
   /* colors */
-  --main-white-color: #FFFFFF;
-  --main-yellow-color: #EAC645;
-  --main-violet-color: #4F2EE8;
+  --main-white-color: #ffffff;
+  --main-yellow-color: #eac645;
+  --main-violet-color: #4f2ee8;
   --main-dark_gray-color: #202024;
   --main-black-color: #111111;
+  /* Body background */
+  --body-background: #f6f6f6;
   /* font-size */
   --font-size-header_nav: 14px;
   --font-size-header_account: 22px;
   --font-size-categories: 16px;
-  --font-size-support_header: 24px;
+  --font-size-support_header: 22px;
   --font-size-main_header: 32px;
 
   --font-size-cards_name: 16px;
@@ -20,9 +22,34 @@
   --font-size-main-btn_shopping: 14px;
   /* fonts-size pc*/
   --pc-font-size-main-btn_shopping: 14px;
-  --pc-font-size-categories:18px;
+  --pc-font-size-categories: 18px;
   --pc-font-size-main_header: 48px;
   --pc-font-size-main-categories_headers: 14px;
   /* pagination */
 
+  /* Library: text-above-card, author;
+  Shopping-list: category, author; 
+  Placeholder: author*/
+  --alternative-text: #b4afaf;
+  --caritas-txt: #ffffff;
+  /* Shopping-list: border */
+  --shopping-list-border: rgba(79, 46, 232, 0.4);
+
+  /* Fonts */
+  --main-font-family: 'DM Sans', sans-serif;
+
+  /* Transition */
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Amazon Logo*/
+  --amazon-logo: grayscale(100%);
+
+  /* Sign In Modal */
+  --icon-color: #111111;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #f6f6f6;
+  /* не забудь убрать бэкграунд колор */
 }
