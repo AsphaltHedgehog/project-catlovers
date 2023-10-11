@@ -18,7 +18,7 @@ async function renderCards(data) {
         const completeCardsSection = renderCardsWrapper(cards,list_name);
         box.insertAdjacentHTML('beforeend', completeCardsSection);
       };
-    } else if (window.screen.width > 768 && window.screen.width < 1440) {
+    } else if (window.screen.width > 767.8 && window.screen.width < 1440) {
       for (let i = 0; i < 4; i += 1) {
         const length = 3;
         const { books, list_name } = data[i];
@@ -35,7 +35,8 @@ async function renderCards(data) {
         box.insertAdjacentHTML('beforeend', completeCardsSection);
       };
     } else {
-      console.log('nepravilno');
+      // console.log('nepravilno');
+      console.error('ops... something went wrong, contact us via email');
       // notify
     };
   } catch (error) {
@@ -48,13 +49,13 @@ async function renderCards(data) {
 
 function renderCardsWrapper(cards, list_name) {
   const markup = `
-  <div>
+  <li>
   <h3 class="item-category">${list_name}</h3>
   <ul class="box-category">
   ${cards}
   </ul>
   <button type="button" aria-label="Show more" class="see-more">See more</button>
-  </div>
+  </li>
   `;
 
   return markup;
