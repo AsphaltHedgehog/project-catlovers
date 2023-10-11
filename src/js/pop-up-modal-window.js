@@ -2,7 +2,6 @@ import { FetchBooks } from './booksApi';
 import { renderBookInfo } from './pop-up-modal-rendering';
 
 const books = document.querySelector('.top-books');
-console.log();
 if (books) {
   books.addEventListener('click', async event => {
     const bookCard = event.target.closest('li.js-book-modal');
