@@ -1,13 +1,11 @@
 function cardRender(books, length) {
   let markup = '';
-  const asdasdad = document.querySelector('.books-content')
-  console.log(length);
+  // const asdasdad = document.querySelector('.books-content')
+  // console.log(length);
   for (let i = 0; i < length; i += 1) {
-    const { list_name, _id,book_image ,title, author } = books[i];
+    const { _id,book_image ,title, author } = books[i];
     
-    markup +=`<li>
-    <h3 class="item-category">${list_name}</h3>
-        <ul class="box-category">
+    markup += `
       <li class="item-category-book js-book-modal" data-book-id="${_id}">
         <a class="link-books-render" href="#">  
       <div class="card-book">
@@ -25,9 +23,7 @@ function cardRender(books, length) {
           </div>
         </a>
           </li>
-    </ul>
-        <button type="button" aria-label="Show more" class="see-more">See more</button>
-  </li>`;
+  `
   };
   return markup;
 }
@@ -37,4 +33,4 @@ function cardRender(books, length) {
 // console.log(div);
 
 
-export default cardRender
+export default cardRender;
