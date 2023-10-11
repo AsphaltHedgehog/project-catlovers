@@ -1,6 +1,85 @@
-<button class="header-btn" type="button">
+<!-- <button class="header-btn" type="button">
   <p class="text-btn">Sign up</p>
   <svg class="icon-btn" width="20" height="20">
     <use href="./images/icons.svg#icon-arrow"></use>
   </svg>
-</button>
+</button> -->
+<!-- <button class="header-btn" type="button">
+    <p class="text-btn">Sign up</p>
+    <svg class="icon-btn" width="20" height="20">
+      <use href="./images/icons.svg#icon-arrow"></use>
+    </svg>
+  </button>
+  <button class="mobile-menu-btn" type="button" id="modalOpenBtn">
+    <svg class="icon-mobile-menu-open" width="28" height="28">
+      <use href="./images/icons.svg#icon-menu"></use>
+    </svg>
+  </button>
+  <button class="close-modal-btn is-hidden" type="button" id="modalCloseBtn">
+    <svg class="icon-mobile-menu-close" width="28" height="28">
+      <use href="./images/icons.svg#icon-x-close"></use>
+    </svg>
+  </button> -->
+
+<div class="backdrop js-backdrop">
+  <div class="login-modal">
+    <!-- <button class="close-modal-btn js-login-btn" type="button" data-login-close>
+        <svg class="icon-x-close" width="28" height="28">
+          <use href="./images/icons.svg#icon-x-close"></use>
+        </svg>
+      </button> -->
+
+    <form class="login-form js-login-form">
+      <div class="login-field-container">
+        <div class="login-field" id="login-field-name">
+          <input
+            class="login-field-input"
+            type="text"
+            name="user_name"
+            id="user_name"
+            minlength="3"
+            placeholder="Enter name"
+          />
+          <span class="modal-error-message">null</span>
+        </div>
+        <div class="login-field">
+          <input
+            class="login-field-input"
+            type="email"
+            name="user_email"
+            id="user_email"
+            required
+            placeholder="example@gmail.com"
+          />
+          <span class="modal-error-message">Enter valid e-mail with '@'</span>
+          <svg class="icon-mail" width="20" height="20">
+            <use href="./images/icons.svg#icon-mail"></use>
+          </svg>
+        </div>
+        <div class="login-field">
+          <input
+            class="login-field-input"
+            type="password"
+            name="user_password"
+            id="user_password"
+            required
+            placeholder="password"
+            minlength="6"
+          />
+          <span class="modal-error-message">Enter minimum 6 symbols</span>
+          <svg class="icon-lock" width="20" height="20">
+            <use href="./images/icons.svg#icon-lock"></use>
+          </svg>
+        </div>
+      </div>
+      <button class="login-submit-btn" type="submit">Sign up</button>
+      <div class="login-sign">
+        <!-- <span class="login-sign-up active">sign up</span>
+            <span class="login-sign-in">sign in</span> -->
+      </div>
+    </form>
+  </div>
+</div>
+<button class="login-logout" type="submit">logout</button>
+
+<script type="module" src="./js/login.js"></script>
