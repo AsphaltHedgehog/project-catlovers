@@ -8,8 +8,8 @@ function renderBookInfo(book, inShoppingList) {
   return `<div class="backdrop backdrop__modal js-book-modal">
   <div class="modal book-card__modal scrollable">
     <button class="modal-close__btn js-book-close">
-      <img src=${new URL(
-        '../images/x-close.svg',
+        <img src=${new URL(
+        '../images/modal-pop/icon-x-close.svg',
         import.meta.url
       )} alt="close_icon" width="24" height="24"/>
     </button>
@@ -35,7 +35,7 @@ function renderBookInfo(book, inShoppingList) {
               <img
                 class="amazon-shop__icon book-shop__icons"
                 src="${new URL(
-                  '../images/shopping-list/amazon-link_2x.png',
+                  '../images/modal-pop/amazon-link_2x.png',
                   import.meta.url
                 )}"
                 alt="amazon-shop icon"
@@ -54,7 +54,7 @@ function renderBookInfo(book, inShoppingList) {
               <img
                 class="apple-book__icon book-shop__icons"
                 src="${new URL(
-                  '../images/shopping-list/books-link_2x.png',
+                  '../images/modal-pop/book-link_2x.png',
                   import.meta.url
                 )}"
                 alt="apple-book icon"
@@ -62,25 +62,7 @@ function renderBookInfo(book, inShoppingList) {
               />
             </a>
           </li>
-          <li class="shops-item">
-            <a
-              class="buy-links"
-              href="${book.bookshop_link}"
-              aria-label="bookshop icon"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="bookshop-icon book-shop__icons"
-                src="${new URL(
-                  '../images/shopping-list/book-shop-link_2x.png',
-                  import.meta.url
-                )}"
-                alt="bookshop icon"
-                loading="lazy"
-              />
-            </a>
-          </li>
+         
         </ul>
       </div>
       
