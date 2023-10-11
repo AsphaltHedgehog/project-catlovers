@@ -15,6 +15,57 @@
   <body>
     <include src="./partials/header.html"></include>
     <include src="./partials/support-ukraine.html"></include>
+      
+      <!-- Список книг-->
+      <section class="shop-section">
+        <div class="shop-container">
+          <div class="shop-title-container">
+            <h1>Shopping<span>List</span></h1>
+          </div>
+          <div class="shop-list-container">
+            <ul class="book-list">
+              <li class="book-list-item">
+                <div class="book-container">
+                  <img 
+                  class="book-img" 
+                  src="./images/book1.jpg" 
+                  alt="Book" 
+                  />
+                    <div class="book-info">
+                      <h2 class="book-title">Назва книги 1</h2>
+                      <h3 class="book-category">Назва категорії</h3>
+                      <p>Короткий опис книги</p>
+                      <h4 class="book-author">ПІБ автора</h4>
+                  </div>
+                </div>
+              </li>
+              <li class="book-list-item">
+                <div class="book-container">
+                  <img 
+                  class="book-img"
+                  src="./images/book1.jpg" 
+                  alt="Book" 
+                  />
+                    <div class="book-info">
+                      <h2 class="book-title">Назва книги 2</h2>
+                      <h3 class="book-category">Назва категорії</h3>
+                      <p>Короткий опис книги</p>
+                      <h4 class="book-author">ПІБ автора</h4>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="pagination">
+            <div class="page-arrow prev disabled"><span>&lt;</span></div>
+            <div class="page-dot active"></div>
+            <div class="page-dot"></div>
+            <div class="page-dot"></div>
+            <div class="page-arrow next"><span>&gt;</span></div>
+          </div>
+        </div>
+      </section>
+
     <include src="./partials/main.html"></include>
     <!-- scripts -->
     <script type="module" src="./index.js"></script>
