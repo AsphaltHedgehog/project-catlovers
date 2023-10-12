@@ -9,34 +9,29 @@ const headerDiv = document.querySelector('.header-container');
 openBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 
-function openModalWindow() {
-    modal.style.display = 'block'
-};
-
-function closeModalWindow() {
-    modal.style.display = 'none'
-};
 
 
 function openModal(e) {
     if (e.target.nodeName === 'BUTTON' || e.target.nodeName === 'svg' || e.target.nodeName === 'use') {
-        openModalWindow();
+        modal.classList.add('is-open')
         openBtn.classList.add('is-hidden');
         closeBtn.classList.remove('is-hidden');
         document.body.style.overflow = "hidden";
         mainContainer.style.display = 'none';
         bookShelf.style.display = 'none';
+        
     }
 };
 
 function closeModal(e) {
     if (e.target.nodeName === 'BUTTON' || e.target.nodeName === 'svg' || e.target.nodeName === 'use') {
-        closeModalWindow();
+        modal.classList.remove('is-open')
         closeBtn.classList.add('is-hidden')
         openBtn.classList.remove('is-hidden');
         document.body.style.overflow = "auto";
         mainContainer.style.display = 'flex';
         bookShelf.style.display = 'flex';
+        
     }
 };
 
