@@ -3,6 +3,7 @@
 
 .categories-select-wrapper {
   overflow: auto;
+  position: relative;
 
   @media only screen and (max-width: 767.8px) {
     height: 228px;
