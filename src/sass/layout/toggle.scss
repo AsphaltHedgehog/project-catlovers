@@ -1,0 +1,52 @@
+.theme-toggle-js {
+    position: relative;
+  
+    margin-left: auto;
+    margin-right: 14px;
+  
+    width: 40px;
+    height: 20px;
+    appearance: none;
+  
+    background: linear-gradient(180deg, var(--main-violet-color) 0%, #dcdcdc 100%);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+  
+    border-radius: 20px;
+  
+    transition-property: background-image;
+    transition-duration: 500ms;
+    transition-timing-function: var(--transition-timing-function);
+  
+    // @include mobile {
+    //   // margin-left: 50px;
+    // }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1;
+      left: 1;
+  
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+  
+      transition-property: transform;
+      transition-duration: 350ms;
+      transition-timing-function: var(--transition-timing-function);
+  
+      background: linear-gradient(180deg, var(--caritas-txt) 0%, #f7f7f7 100%);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1),
+        1px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    &:checked {
+      background-image: linear-gradient(180deg,
+          var(--main-violet-color) 0%,
+          #686868 100%);
+  
+      &::before {
+        transform: translateX(20px);
+      }
+    }
+  }

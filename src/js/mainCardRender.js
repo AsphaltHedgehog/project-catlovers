@@ -24,11 +24,6 @@ function cardRender(books, length) {
   `
   };
   return markup;
-}
-
-
-// console.log(markup);
-// console.log(div);
-
+};
 
 export default cardRender;

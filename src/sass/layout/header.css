@@ -76,7 +76,6 @@
   .header-btn {
     display: flex;
     justify-content: space-between;
-    margin-left: auto;
 
     border-radius: 18px;
     border: 1.5px solid var(--main-black-color);
@@ -105,8 +104,7 @@
 
 .mobile-menu-btn {
   display: flex;
-  margin-left: auto;
-  padding: 10px;
+  padding: 10px 0;
 
   background: none;
   border: none;
@@ -125,8 +123,7 @@
 
 .close-modal-btn {
   display: flex;
-  margin-left: auto;
-  padding: 10px;
+  padding: 10px 0;
 
   background: none;
   border: none;

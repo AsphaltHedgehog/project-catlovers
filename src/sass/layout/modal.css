@@ -1,12 +1,11 @@
 .modal-mobile {
-  display: none;
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 0;
   z-index: -1;
-  width: 100%;
-  height: 100%;
-  padding: 84px 0 0 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 84px 0 20px 0;
   background: url(/src/images/background/mobile-background_mob.png),
     radial-gradient(
       189.32% 190.93% at 59.76% -23.42%,
@@ -17,6 +16,13 @@
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.is-open {
+  transform: translateX(0);
 }
 
 @media only screen and (min-resolution: 192dpi) {
@@ -62,16 +68,15 @@
   display: flex;
 }
 .modal-list-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
   margin: 0 auto;
 }
-.modal-item-nav {
-  margin-bottom: 25px;
-}
 
-.modal-item-nav:last-child {
-  margin-bottom: o;
-}
 .modal-link-nav {
+  display: inline-flex;
   color: var(--main-white-color);
   font-family: DM Sans;
   font-size: 14px;
@@ -80,8 +85,6 @@
   line-height: 1.28;
   letter-spacing: -0.56px;
   text-transform: uppercase;
-
-  padding: 10px 0;
 }
 .modal-link-nav-second {
   display: flex;
@@ -99,8 +102,3 @@
   border-radius: 36px;
   padding: 8px 16px 8px 16px;
 }
-
-/* .modal-conteiner {
-  max-width: 767px;
-  padding: 20px 0;
-} */

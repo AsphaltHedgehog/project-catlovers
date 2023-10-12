@@ -56,10 +56,10 @@
 
   outline: 2px solid var(--main-black-color);
   border-radius: 18px;
-  background-color: var(--main-white-color);
+  background-color: var(--main-bc-modal);
 
   @media screen and (min-width: 768px) and (max-width: 1439.98px) {
-    background-color: var(--main-white-color);
+    background-color: var(--main-bc-modal);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -205,6 +205,7 @@ background: none;
 }
 
 .book-author {
+  font-family: DM Sans;
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
@@ -222,6 +223,7 @@ background: none;
 }
 
 .book-description {
+  font-family: DM Sans;
   margin-bottom: 23px;
   min-height: 70px;
   font-style: normal;
@@ -255,33 +257,37 @@ background: none;
 }
 
 .book-shop__icons {
-  filter: var(--amazon-logo);
+  // filter: var(--amazon-logo);
 
   &:hover,
   &:focus {
-    filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+    
   }
 }
 
 .amazon-shop__icon {
+  filter: var(--amazon-logo);
   width: 62px;
   height: 19px;
 
   &:hover,
   &:focus {
-    fill: var(--main-violet-color);
+    fill: var(--icon-color);
+    filter: grayscale(0%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
   }
 }
 
 .apple-book__icon {
+  filter: grayscale(100%);
   width: 33px;
   height: 32px;
+  &:hover,
+  &:focus {
+    filter: grayscale(0%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+  }
 }
 
-.bookshop-icon {
-  width: 38px;
-  height: 36px;
-}
+
 
 .book-card__btn {
   display: flex;
@@ -298,9 +304,9 @@ background: none;
 
   border: 2px solid var(--main-violet-color);
   border-radius: 40px;
-  background-color: var(--main-white-color);
+  background-color: var(--main-bc-modal);
   color: var(--main-black-color);
-
+  font-family: DM Sans;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -336,6 +342,7 @@ background: none;
 .congrat-text {
   padding-top: 8px;
   margin: 0 auto;
+  font-family: DM Sans;
   font-size: 12px;
   line-height: calc(14 / 12);
   text-align: center;
@@ -358,4 +365,17 @@ background: none;
 .text--is-hidden {
   display: block;
   pointer-events: none;
+}
+
+// body::-webkit-scrollbar-track {
+//   opacity: 100;
+//   overflow: hidden;
+// };
+
+// body::-webkit-scrollbar-thumb {
+//   opacity: 100;
+//   overflow: hidden;
+// }
+body.blockScroll {
+  overflow: hidden;
 }
