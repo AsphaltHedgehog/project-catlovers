@@ -27,7 +27,9 @@ function renderMain(cat, cards) {
   // title.insertAdjacentHTML('beforeend',
   //   ``
   // );
-  box.innerHTML = `${title} <ul class="top-books">${cards}</ul>`;
+  const top = document.querySelector('.top-books');
+  top.innerHTML= `${title}${cards}`;
+  // box.innerHTML = `${title} <ul class="top-books">${cards}</ul>`;
   // .innerHTML(cards);
   // console.log(fragment);
   // box.innerHTML(fragment);
