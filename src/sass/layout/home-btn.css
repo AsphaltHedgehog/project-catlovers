@@ -22,12 +22,12 @@
     fill: currentColor;*/
 }
 
-.icon-home-up:focus {
+.icon-scroll-up:focus {
   fill: gold;
 }
 /* Tablet styles */
 @media screen and (min-width: 768px) and (max-width: 1439.98px) {
-  .icon-home-up {
+  .icon-scroll-up {
     width: 64px;
     height: 64px;
   }
@@ -42,7 +42,7 @@
     bottom: 40px;
     right: 60px;
   }
-  .icon-home-up:hover {
+  .icon-scroll-up:hover {
     fill: gold;
   }
 }
@@ -90,7 +90,7 @@ home {
       bottom: 40px;
       right: 60px;
     }
-    .iicon-scroll-up:hover {
+    .icon-scroll-up:hover {
       fill: gold;
     }
   }
