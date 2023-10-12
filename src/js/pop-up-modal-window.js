@@ -23,12 +23,11 @@ if (books) {
         ?.url,
       apple_link: book_json.buy_links.find(link => link.name === 'Apple Books')
         ?.url,
-      bookshop_link: book_json.buy_links.find(link => link.name === 'Bookshop')
-        ?.url,
     };
 
     const BOOKS_STORAGE = 'books';
     const popup = document.createElement('div');
+    //  document.createElement('div');
 
     popup.innerHTML = renderBookInfo(book_data, isInShoppingList(bookId));
     document.body.appendChild(popup);
