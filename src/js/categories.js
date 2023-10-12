@@ -1,6 +1,6 @@
-import { FetchBooks } from './booksApi'
-import populateGenresList from './renderCategoriesList'
-import onCatSelectBtn from './categoriesSelectBtn'
+import { FetchBooks } from './booksApi.js'
+import populateGenresList from './categoriesRenderList.js'
+import onCatSelectBtn from './categoriesSelectBtn.js'
 
 // ========================================================
 
@@ -22,7 +22,7 @@ async function categoriesList() {
 
 categoriesList()
 
-const log = wrapper.addEventListener('click', ev => onCatSelectBtn(ev))
+wrapper.addEventListener('click', ev => onCatSelectBtn(ev, fetchCategory))
 
 // не забудь проверить что придйдёт от функции ОнКатСелектБТН
 
