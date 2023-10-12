@@ -12,3 +12,4 @@ import './js/support-section.js';
 import './js/header-current-link.js';
 import './js/mobile-modal-window';
 import './js/loader.js';
+import './js/theme-toggle.js'
