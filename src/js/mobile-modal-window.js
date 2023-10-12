@@ -1,7 +1,7 @@
 const openBtn = document.querySelector('#modalOpenBtn');
 const closeBtn = document.querySelector('#modalCloseBtn');
 const modal = document.querySelector('#myModal');
-const mainContainer = document.querySelector('.cat');
+const mainContainer = document.querySelector('.base-wrapper');
 const bookShelf = document.querySelector('.book-shelf')
 const headerDiv = document.querySelector('.header-container');
 
