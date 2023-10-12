@@ -7,11 +7,13 @@ btn.addEventListener('click', e => {
 
   if (statusBtn) {
     statusBtn = !statusBtn;
-    list.scrollIntoView({ block: 'end', behavior: 'smooth' });
+
+    list.classList.add('scroll');
     btn.classList.add('up');
   } else {
     statusBtn = true;
-    list.scrollIntoView({ block: 'start', behavior: 'smooth' });
+
+    list.classList.remove('scroll');
     btn.classList.remove('up');
   }
 });
