@@ -1,0 +1,129 @@
+.main-title {
+  font-family: DM Sans;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: var(--main-black-color);
+  margin: 40px auto;
+}
+
+.color-accent {
+  color: var(--main-violet-color);
+}
+
+.item-category {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #b4afaf;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.img-book {
+  width: 335px;
+  height: 485px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+.title-book {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: var(--main-black-color);
+  margin-bottom: 4px;
+}
+
+.author-book {
+  font-family: DM Sans;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 14px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: #b4afaf;
+}
+
+.see-more {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--main-black-color);
+  width: 124px;
+  height: 46px;
+  padding: 14px, 28px, 14px, 28px;
+  border-radius: 40px;
+  gap: 10px;
+  border: 2px solid var(--main-violet-color);
+  margin-bottom: 40px;
+  margin-left: 211px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439.98px) {
+  .main-title {
+    margin-top: 98px;
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .img-book {
+    width: 218px;
+    height: 316px;
+  }
+
+  .box-category {
+    display: flex;
+    width: calc((100% - 50px) / 3);
+    height: 366px;
+    gap: 25px;
+  }
+
+  .see-more {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 580px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .main-title {
+    margin-right: 631px;
+    margin-left: 40px;
+  }
+
+  .item-category {
+    line-height: 24px;
+    margin-left: 40px;
+  }
+
+  .img-book {
+    width: 180px;
+    height: 256px;
+  }
+
+  .box-category {
+    display: flex;
+    width: calc((100% - 96px) / 5);
+    height: 306px;
+    gap: 24px;
+  }
+
+  .see-more {
+    margin-top: 32px;
+    margin-left: 872px;
+  }
+}
