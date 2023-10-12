@@ -104,7 +104,7 @@
 
 .mobile-menu-btn {
   display: flex;
-  padding: 10px;
+  padding: 10px 0;
 
   background: none;
   border: none;
@@ -123,7 +123,7 @@
 
 .close-modal-btn {
   display: flex;
-  padding: 10px;
+  padding: 10px 0;
 
   background: none;
   border: none;

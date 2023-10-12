@@ -9,6 +9,9 @@ const headerDiv = document.querySelector('.header-container');
 openBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 
+function mainContainerDisplay() {
+    mainContainer.style.display = 'flex'
+}
 
 
 function openModal(e) {
@@ -29,7 +32,7 @@ function closeModal(e) {
         closeBtn.classList.add('is-hidden')
         openBtn.classList.remove('is-hidden');
         document.body.style.overflow = "auto";
-        mainContainer.style.display = 'flex';
+        setTimeout(mainContainerDisplay, 250)
         bookShelf.style.display = 'flex';
         
     }
@@ -38,11 +41,14 @@ function closeModal(e) {
 window.addEventListener('resize', function() {
   const screenWidth = window.innerWidth;
   if (screenWidth >= 768) {
-      closeModalWindow();
+      modal.style.display = 'none'
       document.body.style.overflow = "auto";
       mainContainer.style.display = 'flex';
       openBtn.classList.remove('is-hidden');
       closeBtn.classList.add('is-hidden');   
+    }
+  else {
+      modal.style.display = 'block'
     }
 });
 
