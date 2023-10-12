@@ -15,11 +15,13 @@
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <include src="./partials/header.html"></include>
-    <div class="container cat">
-      <include src="./partials/categories.html"></include>
-      <include src="./partials/support-ukraine.html"> </include>
+    <div class="container base-wrapper">
+      <div class="cat">
+        <include src="./partials/categories.html"></include>
+        <include src="./partials/support-ukraine.html"> </include>
+      </div>
+      <include src="./partials/main.html"></include>
     </div>
-    <include src="./partials/main.html"></include>
     <include src="./partials/modal.html"></include>
     <!-- scripts -->
     <script type="module" src="./index.js"></script>
