@@ -1,12 +1,12 @@
 function addCurentModalLinkNewClass() {
     
-    const linkEl = document.querySelectorAll('.modal-link-nav');
-    let path = window.location.pathname; 
+    const linkElModal = document.querySelectorAll('.modal-link-nav');
+    let pathModal = window.location.pathname; 
     
     
-    linkEl.forEach(function (link) {
-        let linkPath = link.getAttribute('href');
-        if (path === linkPath) {
+    linkElModal.forEach(function (link) {
+        let linkPathModal = link.getAttribute('href');
+        if (pathModal === linkPathModal) {
             link.classList.add('current-modal');
         }
     })

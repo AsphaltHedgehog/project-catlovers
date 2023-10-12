@@ -8,6 +8,8 @@ function populateGenresList(array) {
   // no filtering btn
   const allCat = document.createElement('li');
   const allCatBtn = document.createElement('button');
+  allCatBtn.setAttribute('type', 'button');
+  allCatBtn.setAttribute('id', 'All categories');
   allCatBtn.classList.add('categories-active', 'categories-list-el');
   allCatBtn.textContent = 'All categories';
   allCat.appendChild(allCatBtn)

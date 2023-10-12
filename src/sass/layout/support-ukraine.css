@@ -45,7 +45,7 @@
 }
 
 .support-title-container h3 {
-  color: var(--main-white-color);
+  color: white;
   font-size: var(--font-size-support_header);
   font-weight: 700;
   line-height: 24px; /* 109.091% */
@@ -53,7 +53,7 @@
 }
 
 .simbol-svg {
-  fill: var(--main-white-color);
+  fill: white;
 }
 
 .support-list-container {
@@ -81,7 +81,7 @@
 }
 
 .support-list-item p {
-  color: var(--main-white-color);
+  color: white;
   font-size: var(--font-size-cards_text);
   font-weight: 400;
   line-height: 18px; /* 128.571% */
