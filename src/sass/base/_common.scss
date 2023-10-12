@@ -147,42 +147,6 @@ img {
 
 
 
-.cat {
-  display: flex;
-  flex-direction: column;
 
-  @media only screen and (max-width: 767.8px) {
-          gap: 40px;
-          justify-content: center;
-  }
-    @media only screen and (min-width: 768px) and (max-width: 1439.98px) {
-          gap: 32px;
-        }
-      ;
-    
-    @media only screen and (min-width: 1440px) {
-          gap: 86px;
-    }
-};
 
-.base-wrapper {
-  display: flex;
-  // padding: 0 20px;
-  gap: 40px;
-
-  @media only screen and (max-width: 767.8px) {
-      // gap: 40px;
-      // justify-content: center;
-    }
-  
-    @media only screen and (min-width: 768px) and (max-width: 1439.98px) {
-      // gap: 32px;
-    }
-  
-    ;
-  
-    @media only screen and (min-width: 1440px) {
-      // gap: 86px;
-    }
-}
 
