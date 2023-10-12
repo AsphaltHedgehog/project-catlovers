@@ -5,6 +5,6 @@ window.addEventListener('load', function () {
   loaders.forEach(loader => {
     this.setTimeout(() => {
       loader.style.display = 'none';
-    }, 2000);
+    }, 500);
   });
 });

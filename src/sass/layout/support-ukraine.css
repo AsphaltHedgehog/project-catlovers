@@ -66,11 +66,12 @@
 .support-list {
   display: inline-flex;
   flex-direction: column;
-
   gap: 20px;
+  transition: transform 1s ease;
 }
 
-.support-list-item {
+.support-list.scroll {
+  transform: translateY(-35%);
 }
 
 .item-container {
