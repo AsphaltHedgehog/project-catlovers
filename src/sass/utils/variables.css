@@ -1,8 +1,11 @@
 :root {
   /* colors */
   --main-white-color: #ffffff;
+  --main-bc-modal: #ffffff;
   --main-yellow-color: #eac645;
+  --accent-yellow-color: #eac645;
   --main-violet-color: #4f2ee8;
+  --accent-violet-color: #4f2ee8;
   --main-dark_gray-color: #202024;
   --main-black-color: #111111;
   /* Body background */
@@ -50,6 +53,77 @@
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background-color: #f6f6f6;
+  background-color: var(--body-background);
   /* не забудь убрать бэкграунд колор */
 }
+
+/* Сюди вписуємо кольори, які застосовуються при світлій темі.
+УВАГА!!! Навіть якщо потрібний колір згаданий у переліку вище, 
+або в цьому переліку, тільки із іншою "темною" парою,
+для позначення змінного кольору його треба продублювати, але під іншою назвою, 
+і застосовувати в стилях тем нову назву. */
+:root[data-theme='light'] {
+  /* Header: border, close-btn, burger-menu; 
+  Library: text, book-title, see-more-btn;
+  Shopping-list: book-title, about;
+  Shopping-list navigation: active-page-btn-background, non-active-btn-border,
+  points-in-btn;
+  Placeholder-card: border, close-btn, title, about
+ 
+  */
+ /* colors */
+ --main-white-color: #ffffff;
+ --main-bc-modal: #ffffff;
+ --main-yellow-color: #eac645;
+  --accent-yellow-color: #eac645;
+  --main-violet-color: #4f2ee8;
+  --accent-violet-color: #4f2ee8;
+ --main-dark_gray-color: #202024;
+ --main-black-color: #111111;
+ /* Body background */
+ --body-background: #f6f6f6;
+ /* font-size */
+
+
+ /* Library: text-above-card, author;
+ Shopping-list: category, author; 
+ Placeholder: author*/
+ --alternative-text: #b4afaf;
+ --caritas-txt: #ffffff;
+ /* Shopping-list: border */
+ --shopping-list-border: rgba(79, 46, 232, 0.4);
+
+ /* Fonts */
+ --main-font-family: 'DM Sans', sans-serif;
+
+ /* Transition */
+ --transition-duration: 250ms;
+ --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ /* Amazon Logo*/
+ --amazon-logo: grayscale(100%);
+
+ /* Sign In Modal */
+ --icon-color: #111111;
+
+
+
+
+
+}
+
+/* Сюди вписуємо кольори-антиподи, але під тими самими назвами! */
+:root[data-theme='dark'] {
+  --main-white-color: #111;
+  --main-bc-modal: #202024;
+  --main-yellow-color: #eac645;
+  --accent-yellow-color: #eac645;
+  --main-violet-color: #4f2ee8;
+  --accent-violet-color: #4f2ee8;
+  --main-dark_gray-color: #202024;
+  --main-black-color: #fff;
+  /* Body background */
+  --body-background: #202024;
+  --icon-color: #f6f6f6;
+  --amazon-logo: brightness(0) invert(1);
+}
+

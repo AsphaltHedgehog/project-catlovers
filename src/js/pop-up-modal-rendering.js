@@ -11,7 +11,7 @@ function renderBookInfo(book, inShoppingList) {
         <img src=${new URL(
         '../images/modal-pop/icon-x-close.svg',
         import.meta.url
-      )} alt="close_icon" width="24" height="24"/>
+      )} alt="close_icon" />
     </button>
     <div class="book-card">
       <div class="book-card__thumb">
