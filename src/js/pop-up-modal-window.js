@@ -1,12 +1,11 @@
 import { FetchBooks } from './booksApi';
 import { renderBookInfo } from './pop-up-modal-rendering';
 
+
+
 // function noScroll() {
 //   window.scrollTo(0, 0)
 // }
-
-
-
 
 function functiondisable() {
   // To get the scroll position of current webpage
@@ -25,6 +24,7 @@ function functiondisable() {
   document.body.classList.remove('blockScroll');
   }
 
+   
 const books = document.querySelector('.top-books');
 if (books) {
   books.addEventListener('click', async event => {
