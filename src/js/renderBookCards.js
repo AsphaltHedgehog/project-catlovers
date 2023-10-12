@@ -6,9 +6,9 @@ async function renderCards(data) {
   const box = document.querySelector('.top-books');
   box.insertAdjacentHTML(
     'beforebegin',
-    '<h2 class="main-title">Best Sellers<span class="color-accent"> Books</span></h2>'
+    '<h2 class="main-title">Best Sellers <span class="color-accent">Books</span></h2>'
   );
-  //==========
+  // ебучие циклы
   const fragment = document.createDocumentFragment();
   try {
     if (window.screen.width < 767.8) {
