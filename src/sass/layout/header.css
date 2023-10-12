@@ -40,7 +40,7 @@
 @media only screen and (min-width: 768px) {
   .list-nav {
     display: flex;
-    gap: 40px;
+    gap: 16px;
     align-items: center;
   }
 }
@@ -76,7 +76,8 @@
   .header-btn {
     display: flex;
     justify-content: space-between;
-    margin-left: auto;
+
+    margin-left: 14px;
 
     border-radius: 18px;
     border: 1.5px solid var(--main-black-color);
@@ -105,8 +106,8 @@
 
 .mobile-menu-btn {
   display: flex;
-  margin-left: auto;
-  padding: 10px;
+  margin-left: 14px;
+  padding: 10px 0;
 
   background: none;
   border: none;
@@ -125,7 +126,7 @@
 
 .close-modal-btn {
   display: flex;
-  margin-left: auto;
+  margin-left: 14px;
   padding: 10px;
 
   background: none;
@@ -141,6 +142,60 @@
 .icon-mobile-menu-close {
   stroke: var(--main-black-color);
 }
+
+/* ===Switcher=== */
+.switch {
+  margin-left: auto;
+  position: relative;
+  display: inline-flex;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1) inset;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 1px;
+  bottom: 0px;
+  top: 1px;
+  right: 1px;
+  background-color: var(--main-white-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(19px);
+  -ms-transform: translateX(19px);
+  transform: translateX(19px);
+}
+/* ============== */
 
 .current {
   font-weight: 700;
