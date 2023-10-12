@@ -19,16 +19,21 @@ async function populateByCategories(fetchCategory) {
 
 function renderMain(cat, cards) {
   const catName = findLastWord(cat);
-  console.log(catName);
 
-  const box = document.querySelector('.top-books');
-  const fragment = document.createDocumentFragment();
-  const title = document.createElement('h2');
-  title.classList.add('main-title');
+  const box = document.querySelector('.book-shelf');
+  const title = `<h2 class="main-title">${catName.string}<span class="color-accent">${catName.lastWord}</span></h2>`
+  // const title = document.createElement('h2');
+  // title.classList.add('main-title');
+  // title.insertAdjacentHTML('beforeend',
+  //   ``
+  // );
+
+  console.log(title);
   
-  // fragment.insertAdjacentHTML("beforebegin",
-  //   '<h2 class="main-title">Best Sellers<span class="color-accent">Books</span></h2>');
-  
+  box.innerHTML = `${title} <ul class="cat-books">${cards}</ul>`;
+  // .innerHTML(cards);
+  // console.log(fragment);
+  // box.innerHTML(fragment);
 };
 
 
