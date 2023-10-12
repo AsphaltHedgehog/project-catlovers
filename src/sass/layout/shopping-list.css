@@ -1,26 +1,27 @@
-.shop-section {
-    float: left;
-    width: 60%;
-  }
+.shop-title-container {
+  color: var(--main-black-color);
+  font-family: var(--main-font-family);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -1.92px;
+  padding-bottom: 40px;
+}
 
-  .shop-title-container {
-    color: var(--main-black-color);
-    font-family: var(--main-font-family);
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 52px;
-    letter-spacing: -1.92px;
-  }
+ .shop-title-container span {
+  color: var(--main-violet-color);
+  font-family: var(--main-font-family);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -1.92px;
+}
   
-   .shop-title-container span {
-    color: var(--main-violet-color);
-    font-family: var(--main-font-family);
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 52px;
-    letter-spacing: -1.92px;
+  /* .all-container {
+    display: flex;
+    gap: 40px;
   }
 
   .shop-list-container {
@@ -43,15 +44,19 @@
     border-radius: 16px;
     display: flex;
     align-items: flex-start;
-    width: 100%;
+    width: 996px;
+    height: 213px;
     max-width: 768px;
     margin: 0 auto; 
-    padding: 24px 30px;
+    padding: 30px 24px;
+    display: flex;
+    
   }
 
   .book-img {
     max-width: 100%;
     height: auto;
+    
   }
   
   .book-info {
@@ -124,4 +129,4 @@
   
   .page-dot span {
     font-size: 14px;
-  }
+  } */

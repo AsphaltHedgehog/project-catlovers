@@ -1,29 +1,24 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const pageDots = document.querySelectorAll(".page-dot");
-    const pageArrows = document.querySelectorAll(".page-arrow");
+import { FetchBooks } from './booksApi'; 
+
+function getBooksFromLocalStorage() {
+  const BOOKS_STORAGE = 'books';
+  const storedBooks = JSON.parse(localStorage.getItem(BOOKS_STORAGE)) || [];
+  return storedBooks;
+}
+
+function displayBooksInShoppingList() {
+  const shoppingListContainer = document.getElementById('book-container');
+  const booksData = getBooksFromLocalStorage(); 
   
-    pageDots.forEach(dot => {
-      dot.addEventListener("click", () => {
-        pageDots.forEach(dot => dot.classList.remove("active"));
-        dot.classList.add("active");
-      });
+  if (booksData.length === 0) {
+    shoppingListContainer.innerHTML = '<p>Your Shopping List is empty.</p>';
+  } else {
+    shoppingListContainer.innerHTML = '';
+    booksData.forEach((book) => {
+      const bookCard = createBookCard(book);
+      shoppingListContainer.appendChild(bookCard);
     });
-  
-    document.querySelector(".page-arrow.prev").addEventListener("click", () => {
-      const activeDot = document.querySelector(".page-dot.active");
-      const prevDot = activeDot.previousElementSibling;
-      if (prevDot) {
-        activeDot.classList.remove("active");
-        prevDot.classList.add("active");
-      }
-    });
-  
-    document.querySelector(".page-arrow.next").addEventListener("click", () => {
-      const activeDot = document.querySelector(".page-dot.active");
-      const nextDot = activeDot.nextElementSibling;
-      if (nextDot) {
-        activeDot.classList.remove("active");
-        nextDot.classList.add("active");
-      }
-    });
-  });
+  }
+}
+
+displayBooksInShoppingList(); 

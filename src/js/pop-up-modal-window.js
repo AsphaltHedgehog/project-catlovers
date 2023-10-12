@@ -60,7 +60,7 @@ if (books) {
       document.removeEventListener('keyup', onEscape);
       evt.stopPropagation();
     }
-
+     
     function isInShoppingList(bookId) {
       let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
       if (!booksDataJson) {
