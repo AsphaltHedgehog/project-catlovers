@@ -22,9 +22,7 @@ async function categoriesList() {
 
 categoriesList()
 
-wrapper.addEventListener('click', ev => onCatSelectBtn(ev, fetchCategory))
-
-// не забудь проверить что придйдёт от функции ОнКатСелектБТН
+wrapper.addEventListener('click', ev => onCatSelectBtn(ev, fetchCategory));
 
 
 
