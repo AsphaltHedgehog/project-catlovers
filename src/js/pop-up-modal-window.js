@@ -8,9 +8,11 @@ import { renderBookInfo } from './pop-up-modal-rendering';
 // }
 
 function functiondisable() {
+  let TopScroll = 0
+  let LeftScroll = 0
   // To get the scroll position of current webpage
   TopScroll = window.scrollY || document.documentElement.scrollTop;
-  LeftScroll = window.scrollX || document.documentElement.scrollLeft,
+  LeftScroll = window.scrollX || document.documentElement.scrollLeft;
   document.body.classList.add('blockScroll');
   
   // if scroll happens, set it to the previous value
