@@ -70,9 +70,12 @@
   }
 };
 
-.categories-list-el:hover {
+.categories-list-el:hover,
+.categories-list-el:focus {
   color: var(--main-violet-color);
 };
+
+
 
 .categories-active {
   color: var(--main-violet-color);

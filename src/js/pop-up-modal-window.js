@@ -1,14 +1,41 @@
 import { FetchBooks } from './booksApi';
 import { renderBookInfo } from './pop-up-modal-rendering';
 
+
+
+// function noScroll() {
+//   window.scrollTo(0, 0)
+// }
+
+function functiondisable() {
+  // To get the scroll position of current webpage
+  TopScroll = window.scrollY || document.documentElement.scrollTop;
+  LeftScroll = window.scrollX || document.documentElement.scrollLeft,
+  document.body.classList.add('blockScroll');
+  
+  // if scroll happens, set it to the previous value
+  window.onscroll = function() {
+  window.scrollTo(LeftScroll, TopScroll);
+          };
+  }
+  
+  function functionenable() {
+  window.onscroll = function() {};
+  document.body.classList.remove('blockScroll');
+  }
+
+   
 const books = document.querySelector('.top-books');
 if (books) {
   books.addEventListener('click', async event => {
+    
+
     const bookCard = event.target.closest('li.js-book-modal');
     if (!bookCard) {
       return;
     }
-
+    // window.addEventListener('scroll', noScroll)
+    functiondisable()
     const bookId = bookCard.getAttribute('data-book-id');
     const fetch = new FetchBooks();
     fetch.bookId = bookId;
@@ -27,7 +54,8 @@ if (books) {
 
     const BOOKS_STORAGE = 'books';
     const popup = document.createElement('div');
-    //  document.createElement('div');
+    
+
 
     popup.innerHTML = renderBookInfo(book_data, isInShoppingList(bookId));
     document.body.appendChild(popup);
@@ -36,7 +64,10 @@ if (books) {
       if (event.key === 'Escape') {
         document.body.removeChild(popup);
         document.removeEventListener('keyup', onEscape);
+        functionenable()
+        // window.removeEventListener('scroll', noScroll)
       }
+     
     };
 
     document.addEventListener('keyup', onEscape);
@@ -48,6 +79,8 @@ if (books) {
       document.body.removeChild(popup);
       document.removeEventListener('keyup', onEscape);
       event.stopPropagation();
+      functionenable()
+      // window.removeEventListener('scroll', noScroll)
     }
 
     const backDropModalEl = popup.querySelector('.backdrop__modal');
@@ -59,6 +92,8 @@ if (books) {
       document.body.removeChild(popup);
       document.removeEventListener('keyup', onEscape);
       evt.stopPropagation();
+      functionenable()
+      // window.removeEventListener('scroll', noScroll)
     }
      
     function isInShoppingList(bookId) {

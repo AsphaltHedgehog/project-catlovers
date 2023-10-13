@@ -3,7 +3,7 @@ import renderBookCards from './renderBookCards.js';
 
 const bookShelf = new FetchBooks;
 
-async function fetchBooks() {
+async function fetchBook() {
   try {
     const response = await bookShelf.fetchTopBooks();
     renderBookCards(response.data)
@@ -13,4 +13,6 @@ async function fetchBooks() {
   };
 };
 
-fetchBooks()
+fetchBook()
+
+export default fetchBook;
