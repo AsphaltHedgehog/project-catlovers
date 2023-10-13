@@ -120,6 +120,10 @@
 .title-book {
   margin-bottom: 4px;
 
+  overflow: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
   color: var(--main-black-color);
   font-size: var(--font-size-cards_name);
   font-weight: 700;
@@ -129,6 +133,10 @@
 }
 
 .author-book {
+overflow: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
   color: var(--alternative-text);
   font-size: var(--font-size-cards_author);
   font-style: italic;
