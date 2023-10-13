@@ -89,7 +89,7 @@ if (books) {
       functionenable();
       // window.removeEventListener('scroll', noScroll)
     }
-     
+
     function isInShoppingList(bookId) {
       let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
       if (!booksDataJson) {
