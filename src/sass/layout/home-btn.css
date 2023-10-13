@@ -1,97 +1,38 @@
-<<<<<<< Updated upstream
-.home {
+<<<<<<< Updated upstream #scrollUpbutton {
+  display: inline-block;
+  background-color: #ff9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
   position: fixed;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border: transparent;
-  color: transparent;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
   cursor: pointer;
+  visibility: hidden;
+  z-index: 1000;
+}
+#scrollUpbutton:after {
+  /* content: '';
+  font-family: ; */
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  fill: var(--main-white-color:);
+}
+#scrollUpbutton:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#scrollUpbutton:active {
+  background-color: #555;
+}
+#scrollUpbutton.show {
+  opacity: 1;
+  visibility: visible;
 }
 
-.icon-scroll-up {
-  /*display: inline-block;*/
-  height: 48px;
-  width: 48px;
-  stroke-width: 2px;
-  fill: peru;
-  /*stroke: currentColor;
-    fill: currentColor;*/
-}
-
-.icon-scroll-up:focus {
-  fill: gold;
-}
-/* Tablet styles */
-@media screen and (min-width: 768px) and (max-width: 1439.98px) {
-  .icon-scroll-up {
-    width: 64px;
-    height: 64px;
-  }
-  .home {
-    bottom: 30px;
-    right: 50px;
-  }
-}
-/* Dasktop styles */
-@media screen and (min-width: 1440px) {
-  .home {
-    bottom: 40px;
-    right: 60px;
-  }
-  .icon-scroll-up:hover {
-    fill: gold;
-  }
-}
-=======
-home {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    border: transparent;
-    color: transparent;
-    cursor: pointer;
-  }
-  
-  .icon-scroll-up {
-    /*display: inline-block;*/
-    height: 48px;
-    width: 48px;
-    stroke-width: 2px;
-    fill: peru;
-    /*stroke: currentColor;
-      fill: currentColor;*/
-  }
-  
-  .icon-scroll-up:focus {
-    fill: gold;
-  }
-  /* Tablet styles */
-  @media screen and (min-width: 768px) and (max-width: 1439.98px) {
-    .icon-scroll-up {
-      width: 64px;
-      height: 64px;
-    }
-    .home {
-      bottom: 30px;
-      right: 50px;
-    }
-  }
-  /* Dasktop styles */
-  @media screen and (min-width: 1440px) {
-    .home {
-      bottom: 40px;
-      right: 60px;
-    }
-    .icon-scroll-up:hover {
-      fill: gold;
-    }
-  }
->>>>>>> Stashed changes
+/* Styles for the content section */
