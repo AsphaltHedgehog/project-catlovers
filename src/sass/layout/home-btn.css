@@ -1,6 +1,6 @@
-<<<<<<< Updated upstream #scrollUpbutton {
+#scrollUpbutton {
   display: inline-block;
-  background-color: #ff9800;
+  background-color: #e0e0e0;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -8,31 +8,29 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
   opacity: 0;
-  cursor: pointer;
   visibility: hidden;
   z-index: 1000;
 }
 #scrollUpbutton:after {
-  /* content: '';
-  font-family: ; */
+  content: "";
+  font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
   font-size: 2em;
   line-height: 50px;
-  fill: var(--main-white-color:);
+  color: blue;
 }
 #scrollUpbutton:hover {
   cursor: pointer;
-  background-color: #333;
+  background-color:var(--main-black-color);
 }
 #scrollUpbutton:active {
-  background-color: #555;
+  background-color:var(--main-violet-color);
 }
 #scrollUpbutton.show {
   opacity: 1;
   visibility: visible;
 }
-
-/* Styles for the content section */
