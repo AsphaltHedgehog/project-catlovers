@@ -1,4 +1,4 @@
-.shop-title-container {
+.shop-title {
   color: var(--main-black-color);
   font-family: var(--main-font-family);
   font-size: 48px;
@@ -9,7 +9,7 @@
   padding-bottom: 40px;
 }
 
- .shop-title-container span {
+ .shop-title span {
   color: var(--main-violet-color);
   font-family: var(--main-font-family);
   font-size: 48px;
