@@ -1,0 +1,65 @@
+.pop_up {
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  z-index: 222;
+  transform: translateY(-50%) scale(0);
+  transition: 0.4s ease-in-out;
+}
+
+.pop_up.active {
+  transform: translateY(0%) scale(100%);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.pop_up_container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.pop_up_body {
+  margin: auto;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 20px 100px 20px;
+  position: relative;
+}
+.pop_up_body input {
+  display: block;
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+}
+
+.pop_up_body input:focus {
+  outline: none;
+}
+
+.pop_up_body button {
+  cursor: pointer;
+  display: block;
+  width: 300px;
+  margin: 60px auto 0px auto;
+  padding: 20px 0px;
+  /* font-weight: ;
+      font-size: ; */
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.pop_up_close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* додати стилі для ел форми */
