@@ -13,3 +13,4 @@ import './js/header-current-link.js';
 import './js/mobile-modal-window';
 import './js/loader.js';
 import './js/theme-toggle.js'
+import './js/scrol-to-top.js';

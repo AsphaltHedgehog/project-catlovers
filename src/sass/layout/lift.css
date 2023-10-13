@@ -1,0 +1,32 @@
+.back-to-home {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+
+  background-color: #4f2ee8;
+
+  position: relative;
+  fill: white;
+
+  border-radius: 32px;
+  border: 2px solid rgba(79, 46, 232, 0.3);
+}
+
+.arrow-svg-scrol {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 767.98px) {
+  .back-to-home {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    display: block;
+  }
+}
+
+@media (min-width: 767.99px) {
+  .back-to-home {
+    display: none;
+  }
+}
