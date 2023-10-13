@@ -6,21 +6,23 @@ import { renderBookInfo } from './pop-up-modal-rendering';
 // }
 
 function functiondisable() {
+  let TopScroll = 0
+  let LeftScroll = 0
   // To get the scroll position of current webpage
   TopScroll = window.scrollY || document.documentElement.scrollTop;
-  (LeftScroll = window.scrollX || document.documentElement.scrollLeft),
-    document.body.classList.add('blockScroll');
-
+  LeftScroll = window.scrollX || document.documentElement.scrollLeft;
+  document.body.classList.add('blockScroll');
+  
   // if scroll happens, set it to the previous value
-  window.onscroll = function () {
-    window.scrollTo(LeftScroll, TopScroll);
-  };
-}
-
-function functionenable() {
-  window.onscroll = function () {};
+  window.onscroll = function() {
+  window.scrollTo(LeftScroll, TopScroll);
+          };
+  }
+  
+  function functionenable() {
+  window.onscroll = function() {};
   document.body.classList.remove('blockScroll');
-}
+  }
 
 const books = document.querySelector('.top-books');
 if (books) {
