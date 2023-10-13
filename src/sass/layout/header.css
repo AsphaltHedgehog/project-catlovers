@@ -33,6 +33,10 @@
   }
 }
 
+.logo-text {
+  fill: var(--main-black-color);
+}
+
 .list-nav {
   display: none;
 }
@@ -49,7 +53,6 @@
   color: var(--main-black-color);
   font-family: DM Sans;
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
   line-height: 1.28;
   letter-spacing: -0.56px;
@@ -93,7 +96,6 @@
   color: var(--main-white-color);
   font-family: DM Sans;
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
   line-height: 1.28;
   letter-spacing: -0.56px;
