@@ -28,7 +28,7 @@ function renderMain(cat, cards) {
   //   ``
   // );
   const top = document.querySelector('.top-books');
-  top.innerHTML= `${title}${cards}`;
+  top.innerHTML= `${title}<div class="cat-books-container">${cards}</div>`;
   // box.innerHTML = `${title} <ul class="top-books">${cards}</ul>`;
   // .innerHTML(cards);
   // console.log(fragment);

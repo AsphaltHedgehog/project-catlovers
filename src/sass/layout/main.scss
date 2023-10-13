@@ -120,7 +120,7 @@
   // }
 }
 
-.top-books li {
+.top-books-containers {
   display: flex;
   flex-direction: column;
 
@@ -130,6 +130,20 @@
 
   @media only screen and (min-width: 768px) and (max-width: 1439.98px) {
   
+  }
+}
+
+.cat-books-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @media only screen and (min-width: 768px) and (max-width: 1439.98px) {
+    column-gap: 25px;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    column-gap: 24px;
   }
 }
 
@@ -263,7 +277,7 @@
 
 .img-book {
   border-radius: 8px;
-  object-fit: contain;
+  object-fit: cover;
   
     @media only screen and (max-width: 767.8px) {
       width: 335px;
