@@ -1,16 +1,16 @@
 import { FetchBooks } from './booksApi';
 import { renderBookInfo } from './pop-up-modal-rendering';
 
-
-
 // function noScroll() {
 //   window.scrollTo(0, 0)
 // }
 
 function functiondisable() {
+  let TopScroll = 0
+  let LeftScroll = 0
   // To get the scroll position of current webpage
   TopScroll = window.scrollY || document.documentElement.scrollTop;
-  LeftScroll = window.scrollX || document.documentElement.scrollLeft,
+  LeftScroll = window.scrollX || document.documentElement.scrollLeft;
   document.body.classList.add('blockScroll');
   
   // if scroll happens, set it to the previous value
@@ -24,18 +24,15 @@ function functiondisable() {
   document.body.classList.remove('blockScroll');
   }
 
-   
 const books = document.querySelector('.top-books');
 if (books) {
   books.addEventListener('click', async event => {
-    
-
     const bookCard = event.target.closest('li.js-book-modal');
     if (!bookCard) {
       return;
     }
     // window.addEventListener('scroll', noScroll)
-    functiondisable()
+    functiondisable();
     const bookId = bookCard.getAttribute('data-book-id');
     const fetch = new FetchBooks();
     fetch.bookId = bookId;
@@ -54,8 +51,6 @@ if (books) {
 
     const BOOKS_STORAGE = 'books';
     const popup = document.createElement('div');
-    
-
 
     popup.innerHTML = renderBookInfo(book_data, isInShoppingList(bookId));
     document.body.appendChild(popup);
@@ -64,10 +59,9 @@ if (books) {
       if (event.key === 'Escape') {
         document.body.removeChild(popup);
         document.removeEventListener('keyup', onEscape);
-        functionenable()
+        functionenable();
         // window.removeEventListener('scroll', noScroll)
       }
-     
     };
 
     document.addEventListener('keyup', onEscape);
@@ -79,7 +73,7 @@ if (books) {
       document.body.removeChild(popup);
       document.removeEventListener('keyup', onEscape);
       event.stopPropagation();
-      functionenable()
+      functionenable();
       // window.removeEventListener('scroll', noScroll)
     }
 
@@ -92,7 +86,7 @@ if (books) {
       document.body.removeChild(popup);
       document.removeEventListener('keyup', onEscape);
       evt.stopPropagation();
-      functionenable()
+      functionenable();
       // window.removeEventListener('scroll', noScroll)
     }
      

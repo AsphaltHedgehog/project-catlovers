@@ -8,6 +8,8 @@
   --accent-violet-color: #4f2ee8;
   --main-dark_gray-color: #202024;
   --main-black-color: #111111;
+  --congrat-text: rgba(17, 17, 17, 0.5);
+   
   /* Body background */
   --body-background: #f6f6f6;
   /* font-size */
@@ -125,5 +127,6 @@ body {
   --body-background: #202024;
   --icon-color: #f6f6f6;
   --amazon-logo: brightness(0) invert(1);
+  --congrat-text: rgba(233, 233, 233, 0.5);
 }
 
