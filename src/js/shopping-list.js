@@ -1,20 +1,21 @@
 import { FetchBooks } from './booksApi';
-const fetchBooks = new FetchBooks;
-console.log('1');
+const fetchBooks = new FetchBooks();
+let booksArr = [];
+const shoppingListContainer = document.querySelector('.shop-list');
 
 function getBooksFromLocalStorage() {
+  console.log(1);
   const BOOKS_STORAGE = 'books';
   const storedBooks = JSON.parse(localStorage.getItem(BOOKS_STORAGE)) ?? [];
   return storedBooks;
 }
 
-function displayBooksInShoppingList() {
-  console.log('1');
-  const shoppingListContainer = document.querySelector('.shop-list');
-
-  const booksData = getBooksFromLocalStorage(); 
+function displayBooksInShoppingList(ids) {
+    console.log(2);
+  // const booksData = getBooksFromLocalStorage(); 
   
-  if (!booksData.length > 0) {
+  if (!ids.length > 0) {
+    console.log('Empty');
     shoppingListContainer.innerHTML = '<p>This page is empty, add some books and proceed to order.</p>';
     return;
   } 
@@ -23,79 +24,108 @@ function displayBooksInShoppingList() {
     //   const bookCard = createBookCard(book);
     //   shoppingListContainer.appendChild(bookCard);
     // });
-    booksData.forEach((el, index) => { 
-      fetchBooks.bookId = el;
-      const bookInfo = fetchBooks.fetchBookId();
+    // booksData.forEach((el, index) => { 
+    //   fetchBooks.bookId = el._id;
+    //   const bookInfo = fetchBooks.fetchBookId().then(result => { return result.author });
+
+    //   console.log(resultBookInfo);
       
+    // });
+      ids.forEach(id => {
+      fetchBooks.bookId = id._id;
+      const data = fetchBooks.fetchBookId();
+      data.then(el => booksArr.push(el.data));
+      console.log(booksArr);
     });
-}
+    }
 
-displayBooksInShoppingList(); 
+displayBooksInShoppingList(getBooksFromLocalStorage()); 
 
 
 
-// export { renderBookInfo };
+// const markUp = shopListRenderBooks(booksArr);
+// function shopListRenderBooks(booksArr) {
 
-// function renderBookShoppingList(book_id) {`
-//   <div class="modal book-card__modal scrollable">
-//     <button class="">
-//         <img src=${new URL(
-//         '../images/modal-pop/icon-x-close.svg',
-//         import.meta.url
-//       )} alt="close_icon" width="24" height="24"/>
-//     </button>
-//     <div class="book-card">
-//       <div class="book-card__thumb">
-//         <img class="book-card__img" src="${
-//           book.book_image
-//         }" alt="book_image" loading="lazy" />
-//       </div>
-//       <div class="book-info">
-//         <h2 class="book-title">${book.title}</h2>
-//         <h3 class="book-author">${book.author}</h3>
-//         <p class="book-description">${book.description}</p>
-//         <ul class="shops-list list">
-//           <li class="shops-item">
-//             <a
-//               class="buy-links"
-//               href="${book.amazon_link}"
-//               aria-label="amazon-shop icon"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               <img
-//                 class="amazon-shop__icon book-shop__icons"
-//                 src="${new URL(
-//                   '../images/modal-pop/amazon-link_2x.png',
-//                   import.meta.url
-//                 )}"
-//                 alt="amazon-shop icon"
-//                 loading="lazy"
-//               />
-//             </a>
-//           </li>
-//           <li class="shops-item">
-//             <a
-//               class="buy-links"
-//               href="${book.apple_link}"
-//               aria-label="apple-book icon"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               <img
-//                 class="apple-book__icon book-shop__icons"
-//                 src="${new URL(
-//                   '../images/modal-pop/book-link_2x.png',
-//                   import.meta.url
-//                 )}"
-//                 alt="apple-book icon"
-//                 loading="lazy"
-//               />
-//             </a>
-//           </li>
-         
-//         </ul>
-//       </div>
-      
-//     </div>
-//     <div class="book-card__btn">${card__btn}</div>`};
+  
+  const renderBooks = booksArr => { 
+    console.log(3);
+  const markUp = booksArr.map(book => {
+
+      console.log(book);
+      if (window.matchMedia('(max-width: 376px)').matches) {
+        console.log(book);
+        return `<li><div class="shoplist-book-card" id=${book._id}>
+        <button type="button" class="shoplist-delete-book-btn">
+        <img src="" class="shoplist-delete-book-icon" alt="Delete book" width="15" height="15" />
+        </button>
+        <div class="shoplist-book-card-top">
+        <div><img class="shoplist-book-cover" src=${
+          book.book_image
+        } alt="book cover" width=${book.book_image_width} height=${
+          book.book_image_height
+        }/>
+        <p class="shoplist-book-author">${book.author}</p></div>
+        <div><p class="shoplist-book-title">${book.title}</p>
+        <p class="shoplist-book-category">${book.list_name}</p>
+        <div class="shops-logo"><a href=${
+          book.buy_links[0].url
+        } class="shoplist-buy-link" target="_blank" rel="noopener noreferrer" aria-label="Amazon">
+        <img src="" class="shop-logo amazon" width="48" height="15" alt="Amazon" />
+        </a>
+        <a href=${
+          book.buy_links[1].url
+        } class="shoplist-buy-link" target="_blank" rel="noopener noreferrer" aria-label="Apple Books">
+        <img src="" class="shop-logo apple-books" width="28" height="27" alt="Apple Books" />
+        </a>
+        <a href=${
+          book.buy_links[4].url
+        } class="shoplist-buy-link" target="_blank" rel="noopener noreferrer" aria-label="Book Shop">
+        <img src="" class="shop-logo book-shop" width="32" height="30" alt="Book Shop" />
+        </a></div></div></div>
+        <p class="shoplist-book-description">${book.description}</p>
+      </div></li>`;
+      } else {
+        console.log(book);
+        return `<li><div class="shoplist-book-card" id=${book._id}>
+        <button type="button" class="shoplist-delete-book-btn">
+          <img src="" class="shoplist-delete-book-icon" alt="Delete book" width="14" height="14" />
+        </button>
+        <div><img class="shoplist-book-cover" src=${
+          book.book_image
+        } alt="book cover" width=${book.book_image_width} height=${
+          book.book_image_height
+        }/></div>
+        <div><p class="shoplist-book-title">${book.title}</p>
+        <p class="shoplist-book-category">${book.list_name}</p>
+        <p class="shoplist-book-description">${book.description}</p>
+        <p class="shoplist-book-author">${book.author}</p>
+        </div>
+        <div class="shops-logo"><a href=${
+          book.buy_links[0].url
+        } class="shoplist-buy-link" target="_blank" rel="noopener noreferrer" aria-label="Amazon">
+        <img src="" class="shop-logo amazon" width="48" height="15" alt="Amazon" />
+        </a>
+        <a href=${
+          book.buy_links[1].url
+        } class="shoplist-buy-link" target="_blank" rel="noopener noreferrer" aria-label="Apple Books">
+        <img src="" class="shop-logo apple-books" width="28" height="27" alt="Apple Books" />
+        </a>
+        <a href=${
+          book.buy_links[4].url
+        } class="shoplist-buy-link" target="_blank" rel="noopener noreferrer" aria-label="Book Shop">
+        <img src="" class="shop-logo book-shop" width="32" height="30" alt="Book Shop" />
+        </a></div>
+      </div></li>`;
+      }
+    })
+    .join('');
+    // return newArr;
+  shopIsEmpty.innerHTML = '';
+  bookListEl.innerHTML = markUp;
+  sectionTitle.classList.add('title-when-books');
+};
+
+console.log(shoppingListContainer);
+// console.log(markUp);
+
+shoppingListContainer.insertAdjacentHTML('beforeend', renderBooks);
