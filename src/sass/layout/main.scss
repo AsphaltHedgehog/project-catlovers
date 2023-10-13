@@ -159,6 +159,10 @@
 // }
 
 .author-book {
+overflow: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
   color: var(--alternative-text);
   font-size: var(--font-size-cards_author);
   font-style: italic;
