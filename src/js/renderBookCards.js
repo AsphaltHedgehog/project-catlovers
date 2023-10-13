@@ -3,7 +3,7 @@ import renderCard from './mainCardRender.js';
 
 async function renderCards(data) {
   // best seller books title
-  const bookShelf = document.querySelector('.books-content');
+  // const bookShelf = document.querySelector('.books-content');
   // bookShelf.innerHTML = '<ul class="top-books"></ul>';
 
   const box = document.querySelector('.top-books');
@@ -11,7 +11,7 @@ async function renderCards(data) {
     '<h2 class="main-title">Best Sellers<span class="color-accent"> Books</span></h2>';
 
   // ебучие циклы
-  const fragment = document.createDocumentFragment();
+  // const fragment = document.createDocumentFragment();
   try {
     if (window.screen.width < 767.8) {
       for (let i = 0; i < 4; i += 1) {
@@ -51,7 +51,7 @@ async function renderCards(data) {
 
 function renderCardsWrapper(cards, list_name) {
   const markup = `
-  <li>
+  <li class="top-books-containers ">
   <h3 class="item-category">${list_name}</h3>
   <ul class="box-category">
   ${cards}
