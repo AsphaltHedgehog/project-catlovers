@@ -335,6 +335,7 @@
   &:focus {
     background-color: var(--main-violet-color);
     color: var(--main-white-color);
+    outline: none;
   };
 }
 

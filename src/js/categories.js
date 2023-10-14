@@ -4,7 +4,7 @@ import onCatSelectBtn from './categoriesSelectBtn.js'
 
 // ========================================================
 
-const wrapper = document.querySelector('.categories-select-wrapper')
+const wrapper = document.querySelector('.base-wrapper')
 
 // ========================================================
 
