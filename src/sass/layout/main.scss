@@ -123,6 +123,7 @@
 .top-books-containers {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   @media only screen and (max-width: 767.8px) {
     
@@ -153,6 +154,8 @@
 }
 
 .img-card-book {
+  position: relative;
+  overflow: hidden;
   // width: 180px;
   // height: 256px;
 
@@ -400,4 +403,42 @@
   // }
 
 
+}
+
+.img-card-book {
+
+}
+
+@media only screen and (min-width: 1440px) {
+  .hover-overlay {
+      position: absolute;
+      bottom: -70px;
+      left: 0px;
+      width: 180px;
+      height: 70px;
+  
+      background-color: var(--accent-yellow-color);
+  
+      transition: transform 250ms ease-in-out;
+    }
+  
+    .overlay-text {
+      font-size: 14px;
+      color: black;
+      font-family: var(--main-font-family);
+      font-weight: 500;
+      line-height: 1.28;
+      letter-spacing: 0.04em;
+  
+  
+      text-transform: uppercase;
+      text-align: center;
+      padding: 24px;
+    }
+  
+  
+    .img-card-book:hover .hover-overlay,
+    .img-card-book:focus .hover-overlay {
+      transform: translateY(-60px);
+    }
 }
