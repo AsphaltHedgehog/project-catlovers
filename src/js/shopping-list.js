@@ -14,7 +14,7 @@ let booksArr = '';
 
 function getBooksFromLocalStorage() {
   const BOOKS_STORAGE = 'books';
-  storedBooks = JSON.parse(localStorage.getItem(BOOKS_STORAGE)) ?? [];
+  const storedBooks = JSON.parse(localStorage.getItem(BOOKS_STORAGE)) ?? [];
 };
 
 getBooksFromLocalStorage();
