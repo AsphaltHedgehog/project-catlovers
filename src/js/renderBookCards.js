@@ -8,7 +8,7 @@ async function renderCards(data) {
 
   const box = document.querySelector('.top-books');
   box.innerHTML =
-    '<h2 class="main-title">Best Sellers<span class="color-accent"> Books</span></h2>';
+    '<li><h2 class="main-title">Best Sellers<span class="color-accent"> Books</span></h2></li>';
 
   // ебучие циклы
   // const fragment = document.createDocumentFragment();
@@ -21,7 +21,7 @@ async function renderCards(data) {
         const completeCardsSection = renderCardsWrapper(cards, list_name);
         box.insertAdjacentHTML('beforeend', completeCardsSection);
       }
-    } else if (window.screen.width > 767.8 && window.screen.width < 1440) {
+    } else if (window.screen.width > 767.8 && window.screen.width < 1439.98) {
       for (let i = 0; i < 4; i += 1) {
         const length = 3;
         const { books, list_name } = data[i];
@@ -56,7 +56,7 @@ function renderCardsWrapper(cards, list_name) {
   <ul class="box-category">
   ${cards}
   </ul>
-  <button type="button" aria-label="Show more" class="see-more">See more</button>
+  <button type="button" data-cat-name='${list_name}' aria-label="Show more" class="see-more">See more</button>
   </li>
   `;
 

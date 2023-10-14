@@ -297,17 +297,6 @@
 
 
 
-// .author-book {
-//   font-family: DM Sans;
-//   font-size: 12px;
-//   font-weight: 400;
-//   font-style: italic;
-//   line-height: 14px;
-//   
-//   text-align: left;
-//   color: #b4afaf;
-// }
-
 
 .box-author .author-book {
   overflow: hidden;
@@ -323,7 +312,6 @@
 }
 
 .see-more {
-
   font-family: DM Sans;
   font-size: 14px;
   font-weight: 700;
@@ -332,57 +320,24 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--main-black-color);
+  background-color: var(--main-bc-modal);
   align-self: flex-end;
   padding: 14px 28px;
   border-radius: 40px;
   border: 2px solid var(--main-violet-color);
+
+  transition-property: color, background-color;
+
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--main-violet-color);
+    color: var(--main-white-color);
+    outline: none;
+  };
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439.98px) {
-  // .main-title {
-  //   margin-top: 98px;
-  //   font-size: 48px;
-  //   line-height: 52px;
-  // }
-
-  .img-book {
-    width: 218px;
-    height: 316px;
-  }
-
-  // .box-category {
-  //   display: flex;
-  //   width: calc((100% - 50px) / 3);
-  //   height: 366px;
-  //   // gap: 25px;
-  // }
-
-  .see-more {
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  // .main-title {
-  //   margin-right: 631px;
-  //   margin-left: 40px;
-  // }
-
-  // .item-category {
-  //   line-height: 24px;
-  //   margin-bottom: 18px;
-  // }
-
-  .img-book {
-    width: 180px;
-    height: 256px;
-  }
-
-  // .box-category {
-  //   display: flex;
-  //   width: calc((100% - 96px) / 5);
-  //   height: 306px;
-  //   gap: 24px;
-  // }
 
 
-}
