@@ -19,7 +19,6 @@ async function onCatSelectBtn(click, fetchCategory) {
     console.log(error);
   }
   // const privActiveBtn = document.querySelector('.categories-active');
-  console.log(privActiveBtn);
   addActiveStyle(click, privActiveBtn)
   // privActiveBtn.classList.remove('categories-active');
   // click.target.classList.add('categories-active');
@@ -39,7 +38,8 @@ async function onCatSelectBtn(click, fetchCategory) {
 
 
 function addActiveStyle(click, activeBtn) {
-  categoryName = click.srcElement.dataset.catName;
+  const categoryName = click.srcElement.dataset.catName;
+
   catSelector = document.querySelectorAll('.categories-list li');
   for (const el of catSelector) {
     const btn = el.querySelector(`button[data-cat-name='${categoryName}']`);
@@ -48,7 +48,6 @@ function addActiveStyle(click, activeBtn) {
       btn.classList.add('categories-active')
       break;
     }
-    console.log(1);
   }
 }
 
