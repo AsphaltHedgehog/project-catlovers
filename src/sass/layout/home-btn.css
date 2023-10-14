@@ -1,36 +1,76 @@
 #scrollUpbutton {
-  display: inline-block;
-  background-color: #e0e0e0;
+  /*   display: inline-block;
+    background-color: #FF9800; */
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: transparent;
+  color: transparent;
+  cursor: pointer;
   width: 50px;
   height: 50px;
   text-align: center;
-  border-radius: 4px;
-  position: fixed;
+  border-radius: 50px;
   bottom: 30px;
   right: 30px;
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
 }
+
+.icon-scroll-up {
+  height: 48px;
+  width: 48px;
+  stroke-width: 2px;
+  fill: green;
+}
+.icon-scroll-up:focus {
+  fill: var(--accent-color);
+}
+
 #scrollUpbutton:after {
-  content: "";
+  content: '';
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
   font-size: 2em;
   line-height: 50px;
-  color: blue;
+  color: #fff;
 }
 #scrollUpbutton:hover {
   cursor: pointer;
-  background-color:var(--main-black-color);
+  /*   background-color: ; */
 }
 #scrollUpbutton:active {
-  background-color:var(--main-violet-color);
+  background-color: red;
 }
 #scrollUpbutton.show {
   opacity: 1;
   visibility: visible;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) and (max-width: 1439.98px) {
+  .icon-scroll-up {
+    width: 64px;
+    height: 64px;
+  }
+  #scrollUpbutton {
+    bottom: 30px;
+    right: 50px;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1440px) {
+  #scrollUpbutton {
+    bottom: 40px;
+    right: 60px;
+  }
+  .icon-scroll-up:hover {
+    fill: var(--accent-color);
+  }
 }
