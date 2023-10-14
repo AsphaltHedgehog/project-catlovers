@@ -286,7 +286,7 @@
   &:hover,
   &:focus {
     fill: var(--icon-color);
-    filter: grayscale(0%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+    filter:invert(1) grayscale(0%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
   }
 }
 
@@ -330,7 +330,8 @@
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--main-violet-color);
     color: var(--main-white-color);
   }
