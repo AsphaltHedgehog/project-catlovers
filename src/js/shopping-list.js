@@ -10,11 +10,13 @@ const shoppingListContainer = document.querySelector('.shop-list');
 
 let booksArr = '';
 
+let storedBooks;
+
 // =================================================================
 
 function getBooksFromLocalStorage() {
   const BOOKS_STORAGE = 'books';
-  const storedBooks = JSON.parse(localStorage.getItem(BOOKS_STORAGE)) ?? [];
+  storedBooks = JSON.parse(localStorage.getItem(BOOKS_STORAGE)) ?? [];
 };
 
 getBooksFromLocalStorage();
