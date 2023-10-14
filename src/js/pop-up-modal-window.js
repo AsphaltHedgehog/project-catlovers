@@ -114,7 +114,6 @@ if (books) {
     });
 
     function addToShoppingList(book) {
-      console.log('adding', book);
       let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
       if (!booksDataJson) {
         booksDataJson = '[]';
@@ -125,7 +124,6 @@ if (books) {
     }
 
     function removeFromShoppingList(book) {
-      console.log('removing', book);
       let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
       if (booksDataJson === null) {
         return;
