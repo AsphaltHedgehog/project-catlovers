@@ -21,7 +21,7 @@ function renderMain(cat, cards) {
   const catName = findLastWord(cat);
 
   const box = document.querySelector('.books-content');
-  const title = `<h2 class="main-title">${catName.string} <span class="color-accent">${catName.lastWord}</span></h2>`
+  const title = `<li><h2 class="main-title">${catName.string} <span class="color-accent">${catName.lastWord}</span></h2></li>`
   // const title = document.createElement('h2');
   // title.classList.add('main-title');
   // title.insertAdjacentHTML('beforeend',

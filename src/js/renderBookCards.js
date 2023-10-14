@@ -8,7 +8,7 @@ async function renderCards(data) {
 
   const box = document.querySelector('.top-books');
   box.innerHTML =
-    '<h2 class="main-title">Best Sellers<span class="color-accent"> Books</span></h2>';
+    '<li><h2 class="main-title">Best Sellers<span class="color-accent"> Books</span></h2></li>';
 
   // ебучие циклы
   // const fragment = document.createDocumentFragment();
