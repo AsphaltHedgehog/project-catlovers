@@ -27,17 +27,18 @@ function renderSavedBooks({
   _id, book_image, title, list_name, description, author,buy_links
 }) {
   booksArr = `
-  <li class="shopplist-item" data-idcard="${_id}">
+  <li class="shop-item" data-idcard="${_id}">
         <button type="button" class="delate-btn" data-id="${_id}">
           <svg class="delate-svg" width="16" height="16">
+          <use href="./images/icons.svg#icon-delete"></use>
           </svg>
         </button>
-        <img class="img-shoplist-card" src="${book_image}" alt="${title}" width="100" height="142" loading="lazy"/>
+        <img class="img-shop-list" src="${book_image}" alt="${title}" width="100" height="116" loading="lazy"/>
         <div class="card-shopplist">
           <h2 class="card-title-shoplist">${title}</h2>
           <p class="card-category-shoplist">${list_name}</p>
           <p class="card-description-shoplist">${description}</p>
-          <div class="wrapper-card-shoplist-footer">
+          <div class="wrapper-card-shoplist">
             <p class="card-author-shoplist">${author}</p>
             <ul class="shops-list">
             <li class="shops-item">
@@ -56,6 +57,7 @@ function renderSavedBooks({
                 )}"
                 alt="amazon-shop icon"
                 loading="lazy"
+                width="32" height="11"
               />
             </a>
             </li>
@@ -75,6 +77,7 @@ function renderSavedBooks({
                 )}"
                 alt="amazon-shop icon"
                 loading="lazy"
+                width="16" height="16"
               />
             </a>
             </li>
