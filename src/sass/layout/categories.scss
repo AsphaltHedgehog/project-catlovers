@@ -29,7 +29,7 @@
 };
 
 .categories-select-wrapper::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-thumb);
+  background-color: #e0e0e0;
   border-radius: 12px;
   
 
@@ -72,16 +72,13 @@
 
 .categories-list-el:hover,
 .categories-list-el:focus {
-  color: var(--active-cat);
-  opacity: 100;
-  outline: none;
+  color: var(--main-violet-color);
 };
 
 
 
 .categories-active {
-  color: var(--active-cat);
-  opacity: 100;
+  color: var(--main-violet-color);
   text-transform: uppercase;
   font-weight: 700;
 };
