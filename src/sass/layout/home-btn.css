@@ -1,23 +1,20 @@
-#scrollUpbutton {
-  /*   display: inline-block;
-    background-color: #FF9800; */
-  position: fixed;
+#scrollButton {
   display: flex;
+  background-color: var(--main-violet-color);
+  position: fixed;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   border: transparent;
   color: transparent;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   border-radius: 50px;
   bottom: 30px;
   right: 30px;
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
-  /* opacity: 0; */
-  /* visibility: hidden; */
   z-index: 1000;
 }
 
@@ -25,13 +22,13 @@
   height: 48px;
   width: 48px;
   stroke-width: 2px;
-  fill: green;
+  fill: var(--main-white-color);
 }
 .icon-scroll-up:focus {
-  fill: var(--accent-color);
+  fill: var(--accent-yellow-color);
 }
 
-#scrollUpbutton:after {
+#scrollButton:after {
   content: '';
   font-family: FontAwesome;
   font-weight: normal;
@@ -40,14 +37,14 @@
   line-height: 50px;
   color: #fff;
 }
-#scrollUpbutton:hover {
+#scrollButton:hover {
   cursor: pointer;
   /*   background-color: ; */
 }
-#scrollUpbutton:active {
-  background-color: red;
+#scrollButton:active {
+  background-color: var(--main-yellow-color);
 }
-#scrollUpbutton.show {
+#scrollButton.show {
   opacity: 1;
   visibility: visible;
 }
@@ -58,7 +55,7 @@
     width: 64px;
     height: 64px;
   }
-  #scrollUpbutton {
+  #scrollButton {
     bottom: 30px;
     right: 50px;
   }
@@ -66,7 +63,7 @@
 
 /* Desktop styles */
 @media screen and (min-width: 1440px) {
-  #scrollUpbutton {
+  #scrollButton {
     bottom: 40px;
     right: 60px;
   }
