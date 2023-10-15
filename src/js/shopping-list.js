@@ -29,18 +29,16 @@ function renderSavedBooks({
   booksArr = `
   <li class="shop-item" data-idcard="${_id}">
         <button type="button" class="delate-btn" data-id="${_id}">
-          <svg class="delate-svg" width="16" height="16">
-          <use href="./images/icons.svg#icon-delete"></use>
-          </svg>
+          <img class="delate-svg" src=${new URL('../images/shop-list/Icon-delete.svg',import.meta.url)} alt="delete-book" data-id="${_id}"/>
         </button>
-        <img class="img-shop-list" src="${book_image}" alt="${title}" width="100" height="116" loading="lazy"/>
+        <img class="img-shop-list" src="${book_image}" alt="${title}" width="100" height="145" loading="lazy"/>
         <div class="card-shopplist">
           <h2 class="card-title-shoplist">${title}</h2>
           <p class="card-category-shoplist">${list_name}</p>
           <p class="card-description-shoplist">${description}</p>
           <div class="wrapper-card-shoplist">
             <p class="card-author-shoplist">${author}</p>
-            <ul class="shops-list">
+            <ul class="shop-list-card">
             <li class="shops-item">
             <a
               class="buy-links"
@@ -50,14 +48,13 @@ function renderSavedBooks({
               rel="noopener noreferrer"
             >
               <img
-                class="amazon-shop__icon book-shop__icons"
+                // class="amazon-shop-icon-shoplist"
                 src="${new URL(
                   '../images/modal-pop/amazon-link_2x.png',
                   import.meta.url
                 )}"
                 alt="amazon-shop icon"
                 loading="lazy"
-                width="32" height="11"
               />
             </a>
             </li>
@@ -70,14 +67,13 @@ function renderSavedBooks({
               rel="noopener noreferrer"
             >
               <img
-                class="amazon-shop__icon book-shop__icons"
+                class="apple-book-shoplist "
                 src="${new URL(
                   '../images/modal-pop/book-link_2x.png',
                   import.meta.url
                 )}"
                 alt="amazon-shop icon"
                 loading="lazy"
-                width="16" height="16"
               />
             </a>
             </li>
