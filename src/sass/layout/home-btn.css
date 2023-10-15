@@ -1,0 +1,73 @@
+#scrollButton {
+  display: flex;
+  background-color: var(--main-violet-color);
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: transparent;
+  color: transparent;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50px;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  z-index: 1000;
+}
+
+.icon-scroll-up {
+  height: 48px;
+  width: 48px;
+  stroke-width: 2px;
+  fill: var(--main-white-color);
+}
+.icon-scroll-up:focus {
+  fill: var(--accent-yellow-color);
+}
+
+#scrollButton:after {
+  content: '';
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#scrollButton:hover {
+  cursor: pointer;
+  /*   background-color: ; */
+}
+#scrollButton:active {
+  background-color: var(--main-yellow-color);
+}
+#scrollButton.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) and (max-width: 1439.98px) {
+  .icon-scroll-up {
+    width: 64px;
+    height: 64px;
+  }
+  #scrollButton {
+    bottom: 30px;
+    right: 50px;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1440px) {
+  #scrollButton {
+    bottom: 40px;
+    right: 60px;
+  }
+  .icon-scroll-up:hover {
+    fill: var(--accent-color);
+  }
+}
