@@ -1,13 +1,13 @@
 #scrollButton {
-  display: flex;
+  display: none;
   background-color: var(--main-violet-color);
   position: fixed;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   border-width: 5px;
-  border-color: #502ee856;
   color: white;
+  border-color: transparent;
   cursor: pointer;
   width: 64px;
   height: 64px;
@@ -41,7 +41,7 @@
 }
 #scrollButton:hover {
   cursor: pointer;
-  /*   background-color: ; */
+  fill: white;
 }
 #scrollButton:active {
   background-color: var(--main-yellow-color);

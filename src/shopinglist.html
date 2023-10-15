@@ -13,13 +13,19 @@
     />
   </head>
   <body>
-    <include src="./partials/header.html"></include>
-    <div class="container base-wrapper">
-      <include src="./partials/support-ukraine.html"></include>
-      <include src="./partials/shop-list.html"></include>
-    </div>
+    <header class="header-section">
+      <include src="./partials/header.html"></include>
+    </header>
+    <main>
+      <h1 class="is-hidden">Shop list</h1>
+      <div class="container base-wrapper">
+        <include src="./partials/support-ukraine.html"></include>
+        <include src="./partials/shop-list.html"></include>
+      </div>
+    </main>
     <!-- <include src="./partials/main.html"></include> -->
     <include src="./partials/modal.html"></include>
+
     <!-- scripts -->
     <script type="module" src="./shopinglist.js"></script>
   </body>
