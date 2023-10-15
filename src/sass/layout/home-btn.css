@@ -1,15 +1,16 @@
 #scrollButton {
-  display: flex;
+  display: none;
   background-color: var(--main-violet-color);
   position: fixed;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border: transparent;
-  color: transparent;
+  border-width: 5px;
+  color: white;
+  border-color: transparent;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 64px;
+  height: 64px;
   text-align: center;
   border-radius: 50px;
   bottom: 30px;
@@ -22,7 +23,8 @@
   height: 48px;
   width: 48px;
   stroke-width: 2px;
-  fill: var(--main-white-color);
+  fill: #fff;
+  /* fill: var(--main-white-color); */
 }
 .icon-scroll-up:focus {
   fill: var(--accent-yellow-color);
@@ -39,7 +41,7 @@
 }
 #scrollButton:hover {
   cursor: pointer;
-  /*   background-color: ; */
+  fill: white;
 }
 #scrollButton:active {
   background-color: var(--main-yellow-color);
@@ -47,6 +49,12 @@
 #scrollButton.show {
   opacity: 1;
   visibility: visible;
+}
+
+@media only screen and (min-width: 768px) {
+  #scrollButton {
+    display: none;
+  }
 }
 
 /* Tablet styles */

@@ -2,6 +2,19 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
+}
+
+/* @media only screen and (max-width: 1439.98px) {
+  .shop-list {
+    
+  }
+} */
+
+@media only screen and (min-width: 1440px) {
+  .shop-list {
+    width: 996px;
+  }
 }
 
 .shop-title {
@@ -23,6 +36,12 @@
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .shop-title {
+    margin-bottom: 140px;
+  }
+}
+
 .shop-title-span {
   color: var(--main-violet-color);
   font-family: DM Sans;
@@ -38,6 +57,10 @@
     line-height: 1.08;
     letter-spacing: -1.92px;
   }
+}
+
+.text-empty-shop-list {
+  color: var(--main-black-color);
 }
 
 .shop-item {
@@ -83,6 +106,11 @@
   border-radius: 50%;
   border-style: none;
   cursor: pointer;
+
+  background-image: url('../../images/shop-list/Icon-delete.svg');
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -111,6 +139,12 @@
 
 .card-title-shoplist {
   margin-bottom: 4px;
+  width: 144px;
+  height: 18px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   color: var(--main-black-color);
   font-family: DM Sans;
@@ -121,6 +155,16 @@
   text-transform: uppercase;
 }
 
+@media only screen and (min-width: 768px) {
+  .card-title-shoplist {
+    width: auto;
+
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: normal;
+  }
+}
+
 .card-category-shoplist {
   margin-bottom: 14px;
   overflow: hidden;
@@ -129,7 +173,8 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  width: 100%;
+  width: 165px;
+  height: 14px;
 
   font-family: DM Sans;
   font-size: 12px;
@@ -140,37 +185,39 @@
 
 @media only screen and (min-width: 768px) {
   .card-category-shoplist {
-    overflow: none;
-    text-overflow: none;
-    white-space: none;
+    width: auto;
+
+    overflow: auto;
+    text-overflow: clip;
+    white-space: normal;
   }
 }
 
 .card-description-shoplist {
   max-width: 193px;
-  max-height: 68px;
-  overflow: hidden;
-  color: var(--main-black-color);
+  max-height: 55px;
 
+  color: var(--main-black-color);
   margin-bottom: auto;
+
+  display: -webkit-box;
+  overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
   font-family: DM Sans;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px; /* 128.571% */
   letter-spacing: -0.56px;
-
-  overflow: hidden;
-  color: #111;
 }
 
 @media only screen and (min-width: 768px) {
   .card-description-shoplist {
     max-width: 508px;
     max-height: 53px;
-    color: var(--main-black-color);
 
     font-family: DM Sans;
     font-size: 14px;
@@ -183,16 +230,13 @@
 
 @media screen and (min-width: 1440px) {
   .card-description-shoplist {
-    min-width: 808px;
-    overflow: none;
-    text-overflow: none;
-    white-space: none;
+    max-width: 808px;
   }
 }
 
 .wrapper-card-shoplist {
   max-width: 100%;
-  align-items: baseline;
+  align-items: center;
   max-height: 22px;
   display: flex;
   justify-content: space-between;
@@ -212,9 +256,61 @@
   letter-spacing: -0.48px;
 }
 
-.shop-list {
+.shop-list-card {
   display: flex;
   gap: 8px;
+  align-items: center;
+}
+
+.amazon-shop-icon-shoplist {
+  filter: var(--amazon-logo);
+  width: 32px;
+  height: 11px;
+}
+
+@media only screen and (min-width: 768px) {
+  .amazon-shop-icon-shoplist {
+    width: 48px;
+    height: 15px;
+  }
+}
+
+.amazon-shop-icon-shoplist:hover,
+.amazon-shop-icon-shoplist:focus {
+  fill: var(--icon-color);
+  filter: invert(1) grayscale(0%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+}
+
+.apple-book-shoplist {
+  filter: grayscale(100%);
+  width: 16px;
+  height: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .apple-book-shoplist {
+    width: 28px;
+    height: 27px;
+  }
+}
+
+.apple-book-shoplist:hover,
+.apple-book-shoplist:focus {
+  filter: grayscale(0%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+}
+
+@media only screen and (max-width: 1439.98px) {
+  .support-section {
+    display: none;
+  }
+}
+
+.deleted-book {
+  display: none;
+}
+
+.shop-container.book-shelf {
+  display: block;
 }
 
 
