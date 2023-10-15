@@ -9,7 +9,7 @@ function populateGenresList(array) {
   const allCat = document.createElement('li');
   const allCatBtn = document.createElement('button');
   allCatBtn.setAttribute('type', 'button');
-  allCatBtn.setAttribute('id', 'All categories');
+  allCatBtn.setAttribute('data-cat-name', 'All categories');
   allCatBtn.classList.add('categories-active', 'categories-list-el');
   allCatBtn.textContent = 'All categories';
   allCat.appendChild(allCatBtn)
@@ -19,7 +19,7 @@ function populateGenresList(array) {
     const listOfItems = document.createElement('li');
     const item = document.createElement('button');
     item.setAttribute('type', 'button');
-    item.setAttribute('id', `${array[i].list_name}`);
+    item.setAttribute('data-cat-name', `${array[i].list_name}`);
     item.classList.add('categories-list-el');
     item.textContent = `${el.list_name}`;
     listOfItems.appendChild(item);

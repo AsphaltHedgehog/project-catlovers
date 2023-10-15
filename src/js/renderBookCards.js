@@ -8,7 +8,7 @@ async function renderCards(data) {
 
   const box = document.querySelector('.top-books');
   box.innerHTML =
-    '<h2 class="main-title">Best Sellers<span class="color-accent"> Books</span></h2>';
+    '<li><h2 class="main-title">Best Sellers<span class="color-accent"> Books</span></h2></li>';
 
   // ебучие циклы
   // const fragment = document.createDocumentFragment();
@@ -38,7 +38,6 @@ async function renderCards(data) {
         box.insertAdjacentHTML('beforeend', completeCardsSection);
       }
     } else {
-      // console.log('nepravilno');
       console.error('ops... something went wrong, contact us via email');
       // notify
     }
@@ -56,7 +55,7 @@ function renderCardsWrapper(cards, list_name) {
   <ul class="box-category">
   ${cards}
   </ul>
-  <button type="button" aria-label="Show more" class="see-more">See more</button>
+  <button type="button" data-cat-name='${list_name}' aria-label="Show more" class="see-more">See more</button>
   </li>
   `;
 
