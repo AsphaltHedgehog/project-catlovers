@@ -227,32 +227,57 @@
 
   @media only screen and (max-width: 767.8px) {
     margin-bottom: 8px;
+  }
+        
+  @media only screen and (min-width: 768px) and (max-width: 1439.98px) {
+          // width: calc((100% - 50px) / 3);
+          gap: 25px;
+          margin-bottom: 20px;
+    
+          // li:last-child {
+          //   display: none;
+          // };
+          // li:nth-last-child(-n+2) {
+          //   display: none;
+          // };
+        };
+    
+        @media only screen and (min-width: 1440px) {
+          // width: calc((100% - 50px) / 5);
+          gap: 24px;
+    
+          margin-bottom: 32px;
+        };
+        };
+  
 
+  .box-category-pc {
+  @media only screen and (max-width: 767.8px) {
     li:nth-last-child(-n+4) {
+      display: none;
+    };
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1439.98px) {
+    li:nth-last-child(-n+2) {
+        display: none;
+  }
+}
+}
+
+.box-category-tablet {
+  @media only screen and (max-width: 767.98px) {
+    li:nth-last-child(-n+2) {
       display: none;
     }
   }
-
-  @media only screen and (min-width: 768px) and (max-width: 1439.98px){
-    // width: calc((100% - 50px) / 3);
-    gap: 25px;
-    margin-bottom: 20px;
-
-    // li:last-child {
-    //   display: none;
-    // };
-    li:nth-last-child(-n+2) {
-      display: none;
-    };
-  };
-
-  @media only screen and (min-width: 1440px) {
-    // width: calc((100% - 50px) / 5);
-    gap: 24px;
-
-    margin-bottom: 32px;
-  }
+  // li:nth-last-child(-n+2) {
+  //     display: none;
+  //   }
+  
+    ;
 }
+
+
 
 .item-category-book {
 
