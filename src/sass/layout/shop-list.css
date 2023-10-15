@@ -20,7 +20,7 @@
 .shop-title {
   color: var(--main-black-color);
   font-family: DM Sans;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.18;
   letter-spacing: -1.28px;
@@ -28,24 +28,32 @@
   margin-bottom: 40px;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1439.98px) {
+  .shop-title {
+    margin-bottom: 36px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .shop-title {
-    font-size: 32px;
+    font-size: 48px;
     line-height: 1.08;
     letter-spacing: -1.92px;
   }
 }
 
-@media only screen and (min-width: 1440px) {
+/* @media only screen and (min-width: 1440px) {
   .shop-title {
-    margin-bottom: 70px;
+  
   }
-}
+} */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .shop-title-span {
   color: var(--main-violet-color);
   font-family: DM Sans;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.18;
   letter-spacing: -1.28px;
@@ -53,14 +61,33 @@
 
 @media only screen and (min-width: 768px) {
   .shop-title-span {
-    font-size: 32px;
+    font-size: 48px;
     line-height: 1.08;
     letter-spacing: -1.92px;
   }
 }
 
+@media only screen and (max-width: 767.98px) {
+  .shop-list-empty {
+    margin-bottom: 120px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .shop-list-empty {
+    margin-bottom: 140px;
+  }
+}
+
 .text-empty-shop-list {
   color: var(--main-black-color);
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.33em;
+  letter-spacing: 0.04em;
 }
 
 .shop-item {
@@ -313,8 +340,6 @@
   display: block;
 }
 
-
-
 .pagination {
   display: flex;
   justify-content: center;
@@ -334,13 +359,12 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
-  margin: 0 10px; 
-  
+  margin: 0 10px;
 }
 
 .pagination-button:hover {
-  background-color: var(--main-black-color); 
-  color: var(--main-white-color); 
+  background-color: var(--main-black-color);
+  color: var(--main-white-color);
 }
 
 .pagination-button.active {
@@ -365,7 +389,7 @@
   }
 }
 
- /* @media only screen and (min-width: 1440px) { 
+/* @media only screen and (min-width: 1440px) { 
   .pagination-wrepper {
     gap: 40px;
   }
