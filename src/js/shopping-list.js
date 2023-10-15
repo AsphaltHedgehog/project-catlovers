@@ -17,19 +17,25 @@ let storedBooks;
 function getBooksFromLocalStorage() {
   const BOOKS_STORAGE = 'books';
   storedBooks = JSON.parse(localStorage.getItem(BOOKS_STORAGE)) ?? [];
-};
+}
 
 getBooksFromLocalStorage();
 
 // ====================================================================
 
 function renderSavedBooks({
-  _id, book_image, title, list_name, description, author,buy_links
+  _id,
+  book_image,
+  title,
+  list_name,
+  description,
+  author,
+  buy_links,
 }) {
   booksArr = `
   <li class="shop-item" data-idcard="${_id}">
         <button type="button" class="delate-btn" data-id="${_id}">
-          <img class="delate-svg" src=${new URL('../images/shop-list/Icon-delete.svg',import.meta.url)} alt="delete-book" data-id="${_id}"/>
+          
         </button>
         <img class="img-shop-list" src="${book_image}" alt="${title}" width="100" height="145" loading="lazy"/>
         <div class="card-shopplist">
@@ -81,34 +87,33 @@ function renderSavedBooks({
           </div>
         </div>
       </li>
-  `
-};
-
-
+  `;
+}
 
 // ====================================================================
-
 
 async function bookRender(markup) {
   shoppingListContainer.innerHTML = markup;
 }
 
-
 // ====================================================================
 
 async function displayBooksInShoppingList(storedBooks) {
   if (!storedBooks.length > 0) {
-    shoppingListContainer.innerHTML = `<li><p class="text-empty-shop-list">This page is empty, add some books and proceed to order.</p></li><li><img src=${new URL("../images/shop-list/empty-shop-list-bgr.png", import.meta.url)} width="265"
+    shoppingListContainer.innerHTML = `<li><p class="text-empty-shop-list">This page is empty, add some books and proceed to order.</p></li><li><img src=${new URL(
+      '../images/shop-list/empty-shop-list-bgr.png',
+      import.meta.url
+    )} width="265"
       height="198" alt="falling books"/></li>`;
     // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!СКАЧАЙ КНИГУ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     return;
-  };
+  }
 
-  const renderedBooks = []
+  const renderedBooks = [];
 
   for (const el of storedBooks) {
     fetchBooks.bookId = el._id;
-    
+
     const data = await fetchBooks.fetchBookId().then(result => result.data);
 
     renderSavedBooks(data);
@@ -119,16 +124,14 @@ async function displayBooksInShoppingList(storedBooks) {
 
   // storedBooks.forEach(async el => {
   //   fetchBooks.bookId = el._id;
-    
+
   //   const data = await fetchBooks.fetchBookId().then(result => result.data);
 
   //   renderSavedBooks(data)
-    
+
   // });
 
   // await bookRender(booksArr);
-};
+}
 
-
-
-displayBooksInShoppingList(storedBooks); 
+displayBooksInShoppingList(storedBooks);
