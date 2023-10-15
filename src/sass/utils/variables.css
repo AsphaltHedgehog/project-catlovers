@@ -9,7 +9,8 @@
   --main-dark_gray-color: #202024;
   --main-black-color: #111111;
   --congrat-text: rgba(17, 17, 17, 0.5);
-   
+  --scroll-thumb: #e0e0e0;
+  --active-cat: #4f2ee8;
   /* Body background */
   --body-background: #f6f6f6;
   /* font-size */
@@ -73,44 +74,40 @@ body {
   Placeholder-card: border, close-btn, title, about
  
   */
- /* colors */
- --main-white-color: #ffffff;
- --main-bc-modal: #ffffff;
- --main-yellow-color: #eac645;
+  /* colors */
+  --main-white-color: #ffffff;
+  --main-bc-modal: #ffffff;
+  --main-yellow-color: #eac645;
   --accent-yellow-color: #eac645;
   --main-violet-color: #4f2ee8;
   --accent-violet-color: #4f2ee8;
- --main-dark_gray-color: #202024;
- --main-black-color: #111111;
- /* Body background */
- --body-background: #f6f6f6;
- /* font-size */
+  --main-dark_gray-color: #202024;
+  --main-black-color: #111111;
+  --scroll-thumb: #e0e0e0;
+  --active-cat: #4f2ee8;
+  /* Body background */
+  --body-background: #f6f6f6;
+  /* font-size */
 
+  /* Library: text-above-card, author;
+Shopping-list: category, author; 
+Placeholder: author*/
+  --alternative-text: #b4afaf;
+  --caritas-txt: #ffffff;
+  /* Shopping-list: border */
+  --shopping-list-border: rgba(79, 46, 232, 0.4);
 
- /* Library: text-above-card, author;
- Shopping-list: category, author; 
- Placeholder: author*/
- --alternative-text: #b4afaf;
- --caritas-txt: #ffffff;
- /* Shopping-list: border */
- --shopping-list-border: rgba(79, 46, 232, 0.4);
+  /* Fonts */
+  --main-font-family: 'DM Sans', sans-serif;
 
- /* Fonts */
- --main-font-family: 'DM Sans', sans-serif;
+  /* Transition */
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Amazon Logo*/
+  --amazon-logo: grayscale(100%);
 
- /* Transition */
- --transition-duration: 250ms;
- --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
- /* Amazon Logo*/
- --amazon-logo: grayscale(100%);
-
- /* Sign In Modal */
- --icon-color: #111111;
-
-
-
-
-
+  /* Sign In Modal */
+  --icon-color: #111111;
 }
 
 /* Сюди вписуємо кольори-антиподи, але під тими самими назвами! */
@@ -123,10 +120,11 @@ body {
   --accent-violet-color: #4f2ee8;
   --main-dark_gray-color: #202024;
   --main-black-color: #fff;
+  --scroll-thumb: #11111199;
+  --active-cat: #eac645;
   /* Body background */
   --body-background: #202024;
   --icon-color: #f6f6f6;
   --amazon-logo: brightness(0) invert(1);
   --congrat-text: rgba(233, 233, 233, 0.5);
 }
-

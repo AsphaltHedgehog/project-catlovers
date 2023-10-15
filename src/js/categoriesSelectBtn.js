@@ -2,26 +2,30 @@ import populateByCategories from './categoriesSelect';
 import fetchBook from './main';
 
 async function onCatSelectBtn(click, fetchCategory) {
+  const privActiveBtn = document.querySelector('.categories-active');
   if (click.target.nodeName !== 'BUTTON') {
     return;
   };
   try {
-    if (click.target.id === 'All categories') {
+    if (click.target.dataset.catName === 'All categories') {
       fetchBook();
-      const privActiveBtn = document.querySelector('.categories-active');
-      privActiveBtn.classList.remove('categories-active');
-      click.target.classList.add('categories-active');
+      // const privActiveBtn = document.querySelector('.categories-active');
+      // privActiveBtn.classList.remove('categories-active');
+      // click.target.classList.add('categories-active');
+      addActiveStyle(click, privActiveBtn);
       return;
     };
   } catch (error) {
     console.log(error);
   }
-  const privActiveBtn = document.querySelector('.categories-active');
-  privActiveBtn.classList.remove('categories-active');
-  click.target.classList.add('categories-active');
+  // const privActiveBtn = document.querySelector('.categories-active');
+  addActiveStyle(click, privActiveBtn)
+  // privActiveBtn.classList.remove('categories-active');
+  // click.target.classList.add('categories-active');
   try {
     // console.log(click.srcElement.id);
-    fetchCategory.category = click.srcElement.id;
+    fetchCategory.category = click.srcElement.dataset.catName;
+    
     // console.log(fetchCategory.category);
     await populateByCategories(fetchCategory);
   } catch (error) {
@@ -34,7 +38,19 @@ async function onCatSelectBtn(click, fetchCategory) {
 // all.addEventListener('click', () =>  fetchBooks())
 
 
+function addActiveStyle(click, activeBtn) {
+  const categoryName = click.srcElement.dataset.catName;
 
+  const catSelector = document.querySelectorAll('.categories-list li');
+  for (const el of catSelector) {
+    const btn = el.querySelector(`button[data-cat-name='${categoryName}']`);
+    if (btn) {
+      activeBtn.classList.remove('categories-active');
+      btn.classList.add('categories-active')
+      break;
+    }
+  }
+}
 
 
 

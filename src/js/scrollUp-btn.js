@@ -14,12 +14,31 @@
 // });
 
 const scrollButton = document.getElementById('scrollButton');
+const body = document.querySelector('body')
+
+
+
+
+function updateScrollButtonVisibility() {
+  if (window.scrollY > 600) {
+    scrollButton.style.display = 'flex'; 
+  } else {
+    scrollButton.style.display = 'none';
+  }
+}
+
+window.addEventListener('scroll', updateScrollButtonVisibility);
+
 
 scrollButton.addEventListener('click', () => {
-  window.scrollTo({
+  // window.scrollTo({
+  //   top: 0,
+  //   behavior: 'smooth',
+  // });
+  body.scrollIntoView({
     top: 0,
     behavior: 'smooth',
-  });
+  })
 });
 
 // const scrollUpButton = document.getElementById('scrollButton');
