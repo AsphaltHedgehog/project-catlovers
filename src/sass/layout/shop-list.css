@@ -2,6 +2,19 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
+}
+
+/* @media only screen and (max-width: 1439.98px) {
+  .shop-list {
+    
+  }
+} */
+
+@media only screen and (min-width: 1440px) {
+  .shop-list {
+    width: 996px;
+  }
 }
 
 .shop-title {
@@ -23,6 +36,12 @@
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .shop-title {
+    margin-bottom: 140px;
+  }
+}
+
 .shop-title-span {
   color: var(--main-violet-color);
   font-family: DM Sans;
@@ -38,6 +57,10 @@
     line-height: 1.08;
     letter-spacing: -1.92px;
   }
+}
+
+.text-empty-shop-list {
+  color: var(--main-black-color);
 }
 
 .shop-item {
@@ -131,7 +154,7 @@
   .card-title-shoplist {
     width: auto;
 
-    overflow: auto;
+    overflow: hidden;
     text-overflow: clip;
     white-space: normal;
   }
@@ -231,7 +254,7 @@
 .shop-list-card {
   display: flex;
   gap: 8px;
-  align-items: baseline;
+  align-items: center;
 }
 
 .amazon-shop-icon-shoplist {
@@ -261,8 +284,8 @@
 
 @media only screen and (min-width: 768px) {
   .apple-book-shoplist {
-    width: 16px;
-    height: 16px;
+    width: 28px;
+    height: 27px;
   }
 }
 
@@ -279,4 +302,8 @@
 
 .deleted-book {
   display: none;
+}
+
+.shop-container.book-shelf {
+  display: block;
 }
