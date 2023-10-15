@@ -312,3 +312,61 @@
 .shop-container.book-shelf {
   display: block;
 }
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Встановіть відповідний відступ від нижнього краю сторінки */
+}
+
+.pagination-button {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--main-black-color);
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 10px; 
+  
+}
+
+.pagination-button:hover {
+  background-color: var(--main-black-color); 
+  color: var(--main-white-color); 
+}
+
+.pagination-button.active {
+  color: #fff;
+  background-color: #000;
+}
+
+.pagination-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .pagination-wrapper {
+    gap: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pagination-wrapper {
+    gap: 40px;
+  }
+}
+
+ /* @media only screen and (min-width: 1440px) { 
+  .pagination-wrepper {
+    gap: 40px;
+  }
+ } */
