@@ -38,7 +38,6 @@ async function renderCards(data) {
         box.insertAdjacentHTML('beforeend', completeCardsSection);
       }
     } else {
-      // console.log('nepravilno');
       console.error('ops... something went wrong, contact us via email');
       // notify
     }
