@@ -4,10 +4,11 @@ const wrapper = document.querySelector('.shop-list');
 wrapper.addEventListener('click', deleteBook)
 
 function deleteBook(e) {
-    if (!e.target.nodeName === 'BUTTON' || !e.target.nodeName === 'IMG') {
+    if (e.target.nodeName !== 'BUTTON') {
         return
     };
 
+    // && e.target.nodeName !== 'IMG'
     const liEl = e.target.parentElement.parentElement;
     
     liEl.classList.add('deleted-book')

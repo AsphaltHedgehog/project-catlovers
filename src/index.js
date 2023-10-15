@@ -16,5 +16,5 @@ import './js/theme-toggle.js'
 
 import './js/scrol-to-top.js';
 
-import './js/scrollUp-btn.js';
+// import './js/scrollUp-btn.js';
 
