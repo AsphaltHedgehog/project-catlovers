@@ -8,7 +8,7 @@ const fetchBooks = new FetchBooks();
 
 const shoppingListContainer = document.querySelector('.shop-list');
 
-title = document.querySelector('.shop-title');
+const title = document.querySelector('.shop-title');
 
 let booksArr = '';
 
