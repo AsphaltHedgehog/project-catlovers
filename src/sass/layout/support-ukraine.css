@@ -76,9 +76,12 @@
 
 .item-container {
   height: 32px;
+  width: 159px;
   display: flex;
   align-items: center;
   gap: 16px;
+
+  position: relative;
 }
 
 .support-list-item p {
@@ -92,6 +95,12 @@
 .support-img {
   mix-blend-mode: luminosity;
   filter: brightness(0) invert(1);
+
+  object-fit: contain;
+  width: 100%; /* Ensure the image doesn't exceed the container width */
+  height: auto; /* Allow the image to adjust its height while maintaining aspect ratio */
+  display: block; /* Make the image a block-level element */
+  float: left; /* Float the image to the left */
 }
 
 .support-arrow-container {
