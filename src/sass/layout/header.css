@@ -45,11 +45,15 @@
   }
 }
 
+.logo-text {
+  fill: var(--main-black-color);
+}
+
 .link-nav {
   color: var(--main-black-color);
   font-family: DM Sans;
   font-size: 14px;
-  font-style: normal;
+
   font-weight: 500;
   line-height: 1.28;
   letter-spacing: -0.56px;
@@ -90,10 +94,9 @@
 }
 
 .text-btn {
-  color: var(--main-white-color);
+  color: #fff;
   font-family: DM Sans;
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
   line-height: 1.28;
   letter-spacing: -0.56px;
@@ -140,10 +143,15 @@
 }
 
 .current {
+  color: #111;
   font-weight: 700;
   background: var(--main-yellow-color);
   border-radius: 36px;
   padding: 8px 16px 8px 16px;
+}
+
+.current svg {
+  fill: black;
 }
 
 .is-hidden {

@@ -31,7 +31,7 @@
 .categories-select-wrapper::-webkit-scrollbar-thumb {
   background-color: #e0e0e0;
   border-radius: 12px;
-  
+  background-color: var(--scroll-thumb);
 
   @media only screen and (max-width: 767.8px) {
     height: 114px;
@@ -73,12 +73,17 @@
 .categories-list-el:hover,
 .categories-list-el:focus {
   color: var(--main-violet-color);
+
+  color: var(--active-cat);
+  opacity: 100;
+  outline: none;
 };
 
 
 
 .categories-active {
-  color: var(--main-violet-color);
+  color: var(--active-cat);
+  opacity: 100;
   text-transform: uppercase;
   font-weight: 700;
 };

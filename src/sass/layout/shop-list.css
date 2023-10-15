@@ -1,0 +1,282 @@
+.shop-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shop-title {
+  color: var(--main-black-color);
+  font-family: DM Sans;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -1.28px;
+
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .shop-title {
+    font-size: 32px;
+    line-height: 1.08;
+    letter-spacing: -1.92px;
+  }
+}
+
+.shop-title-span {
+  color: var(--main-violet-color);
+  font-family: DM Sans;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -1.28px;
+}
+
+@media only screen and (min-width: 768px) {
+  .shop-title-span {
+    font-size: 32px;
+    line-height: 1.08;
+    letter-spacing: -1.92px;
+  }
+}
+
+.shop-item {
+  position: relative;
+  display: flex;
+  width: 335px;
+  height: 170px;
+  padding: 12px;
+  align-items: flex-start;
+  gap: 14px;
+  flex-shrink: 0;
+  background-color: var(--main-white-color);
+  border-radius: 16px;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+}
+
+@media only screen and (min-width: 768px) {
+  .shop-item {
+    width: 704px;
+    height: 213px;
+    padding: 30px 24px;
+    gap: 24px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .shop-item {
+    width: 996px;
+  }
+}
+
+.delate-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: var(--accent-violet-color);
+  border-radius: 50%;
+  border-style: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .delate-btn {
+    top: 24px;
+    right: 24px;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.delate-svg {
+  stroke: var(--main-white-color);
+}
+
+.img-shop-list {
+  border-radius: 8px;
+}
+
+.card-shopplist {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.card-title-shoplist {
+  margin-bottom: 4px;
+  width: 144px;
+  height: 18px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: var(--main-black-color);
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-title-shoplist {
+    width: auto;
+
+    overflow: auto;
+    text-overflow: clip;
+    white-space: normal;
+  }
+}
+
+.card-category-shoplist {
+  margin-bottom: 14px;
+  overflow: hidden;
+  color: #b4afaf;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  width: 165px;
+  height: 14px;
+
+  font-family: DM Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.36px;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-category-shoplist {
+    width: auto;
+
+    overflow: auto;
+    text-overflow: clip;
+    white-space: normal;
+  }
+}
+
+.card-description-shoplist {
+  max-width: 193px;
+  max-height: 55px;
+
+  color: var(--main-black-color);
+  margin-bottom: auto;
+
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.56px;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-description-shoplist {
+    max-width: 508px;
+    max-height: 53px;
+
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: -0.56px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card-description-shoplist {
+    max-width: 808px;
+  }
+}
+
+.wrapper-card-shoplist {
+  max-width: 100%;
+  align-items: center;
+  max-height: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+
+  margin-top: auto;
+}
+
+.card-author-shoplist {
+  color: #b4afaf;
+
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: -0.48px;
+}
+
+.shop-list-card {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.amazon-shop-icon-shoplist {
+  filter: var(--amazon-logo);
+  width: 32px;
+  height: 11px;
+}
+
+@media only screen and (min-width: 768px) {
+  .amazon-shop-icon-shoplist {
+    width: 48px;
+    height: 15px;
+  }
+}
+
+.amazon-shop-icon-shoplist:hover,
+.amazon-shop-icon-shoplist:focus {
+  fill: var(--icon-color);
+  filter: invert(1) grayscale(0%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+}
+
+.apple-book-shoplist {
+  filter: grayscale(100%);
+  width: 16px;
+  height: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .apple-book-shoplist {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.apple-book-shoplist:hover,
+.apple-book-shoplist:focus {
+  filter: grayscale(0%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+}
+
+@media only screen and (max-width: 1439.98px) {
+  .support-section {
+    display: none;
+  }
+}
+
+.deleted-book {
+  display: none;
+}
