@@ -9,6 +9,11 @@ function cardRender(books, length) {
       <div class="card-book">
             <div class="img-card-book">
             <img src="${book_image}" alt="book" class="img-book">
+            <div class="hover-overlay">
+            <p class="overlay-text">
+            quick view
+            </p>
+            </div>
             </div>
               <div class="box-text-book-best">
                 <div class="box-title">  
