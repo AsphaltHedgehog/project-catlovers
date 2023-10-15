@@ -15,6 +15,20 @@
 
 const scrollButton = document.getElementById('scrollButton');
 
+
+
+// Функция для обновления видимости кнопки "Наверх"
+function updateScrollButtonVisibility() {
+  if (window.scrollY > 600) { // Например, показать кнопку, когда страница прокручена на 200 пикселей и более
+    scrollButton.style.display = 'flex'; // Показать кнопку
+  } else {
+    scrollButton.style.display = 'none'; // Скрыть кнопку
+  }
+}
+
+window.addEventListener('scroll', updateScrollButtonVisibility);
+
+
 scrollButton.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
