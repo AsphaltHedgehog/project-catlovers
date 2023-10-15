@@ -23,6 +23,7 @@ function openModal(e) {
         mainContainer.style.display = 'none';
         bookShelf.style.display = 'none';
         
+        
     }
 };
 
@@ -33,7 +34,7 @@ function closeModal(e) {
         openBtn.classList.remove('is-hidden');
         document.body.style.overflow = "auto";
         setTimeout(mainContainerDisplay, 250)
-        bookShelf.style.display = 'flex';
+        bookShelf.style.display = 'block';
         
     }
 };

@@ -10,6 +10,7 @@ function populateGenresList(array) {
   const allCatBtn = document.createElement('button');
   allCatBtn.setAttribute('type', 'button');
   allCatBtn.setAttribute('data-cat-name', 'All categories');
+  allCatBtn.setAttribute('area-label', 'All categories')
   allCatBtn.classList.add('categories-active', 'categories-list-el');
   allCatBtn.textContent = 'All categories';
   allCat.appendChild(allCatBtn)
@@ -20,6 +21,7 @@ function populateGenresList(array) {
     const item = document.createElement('button');
     item.setAttribute('type', 'button');
     item.setAttribute('data-cat-name', `${array[i].list_name}`);
+    item.setAttribute('area-label', `${array[i].list_name}`);
     item.classList.add('categories-list-el');
     item.textContent = `${el.list_name}`;
     listOfItems.appendChild(item);

@@ -36,8 +36,14 @@
   }
 }
 
+.height {
+  height: 100%;
+}
+
 .modal-btn-sign {
-  display: flex;
+  display: none;
+
+  /* display: flex; */
   justify-content: space-between;
   margin-right: auto;
 
@@ -66,6 +72,9 @@
 }
 .modal-main-nav {
   display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .modal-list-nav {
   display: flex;

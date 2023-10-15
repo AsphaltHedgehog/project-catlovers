@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
+    <title>Shopping list</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/fav-icon/catlovers.webp"
+    />
+    <link rel="stylesheet" href="./sass/shop-list.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,13 +18,19 @@
     />
   </head>
   <body>
-    <include src="./partials/header.html"></include>
-    <div class="container base-wrapper">
-      <include src="./partials/support-ukraine.html"></include>
-      <include src="./partials/shop-list.html"></include>
-    </div>
+    <header class="header-section">
+      <include src="./partials/header.html"></include>
+    </header>
+    <main>
+      <h1 class="is-hidden">Shop list</h1>
+      <div class="container base-wrapper">
+        <include src="./partials/support-ukraine.html"></include>
+        <include src="./partials/shop-list.html"></include>
+      </div>
+    </main>
     <!-- <include src="./partials/main.html"></include> -->
     <include src="./partials/modal.html"></include>
+
     <!-- scripts -->
     <script type="module" src="./shopinglist.js"></script>
   </body>
