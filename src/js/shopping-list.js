@@ -224,7 +224,7 @@ function updatePaginationButtons() {
 
 async function displayBooksInShoppingList(storedBooks) {
   if (!storedBooks.length) {
-    shoppingListContainer.innerHTML = `<li><p class="text-empty-shop-list">Ця сторінка порожня, додайте кілька книг і перейдіть до оформлення замовлення.</p></li><li><img src=${new URL("../images/shop-list/empty-shop-list-bgr.png", import.meta.url)} width="265" height="198" alt="падаючі книги"/></li>`;
+    shoppingListContainer.innerHTML = `<li><p class="text-empty-shop-list">This page is empty, add some books and proceed to order.</p></li><li><img src=${new URL("../images/shop-list/empty-shop-list-bgr.png", import.meta.url)} width="265" height="198" alt="падаючі книги"/></li>`;
     return;
   }
 

@@ -61,6 +61,13 @@
 
 .text-empty-shop-list {
   color: var(--main-black-color);
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.33em;
+  letter-spacing: 0.04em;
 }
 
 .shop-item {
@@ -313,8 +320,6 @@
   display: block;
 }
 
-
-
 .pagination {
   display: flex;
   justify-content: center;
@@ -334,13 +339,12 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
-  margin: 0 10px; 
-  
+  margin: 0 10px;
 }
 
 .pagination-button:hover {
-  background-color: var(--main-black-color); 
-  color: var(--main-white-color); 
+  background-color: var(--main-black-color);
+  color: var(--main-white-color);
 }
 
 .pagination-button.active {
@@ -365,7 +369,7 @@
   }
 }
 
- /* @media only screen and (min-width: 1440px) { 
+/* @media only screen and (min-width: 1440px) { 
   .pagination-wrepper {
     gap: 40px;
   }
