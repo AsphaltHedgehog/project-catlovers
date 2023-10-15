@@ -23,6 +23,7 @@ function openModal(e) {
         mainContainer.style.display = 'none';
         bookShelf.style.display = 'none';
         
+        
     }
 };
 
