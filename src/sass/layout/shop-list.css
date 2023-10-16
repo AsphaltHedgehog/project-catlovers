@@ -340,14 +340,17 @@
   display: block;
 }
 
+/* =============================================================== */
+
 .pagination {
   display: flex;
+  /* flex-direction: row; */
   justify-content: center;
   align-items: center;
-  margin-top: 20px; /* Встановіть відповідний відступ від нижнього краю сторінки */
+  margin-top: 20px;
 }
 
-.pagination-button {
+.pagination-btn {
   width: 44px;
   height: 44px;
   border: 2px solid var(--main-black-color);
@@ -362,14 +365,24 @@
   margin: 0 10px;
 }
 
-.pagination-button:hover {
-  background-color: var(--main-black-color);
+.pagination-btn:hover {
   color: var(--main-white-color);
+  background-color: var(--main-black-color);
 }
 
-.pagination-button.active {
-  color: #fff;
-  background-color: #000;
+.pagination-btn.active {
+  color: var(--main-white-color);
+  background-color: var(--main-black-color);
+}
+
+.prev-btn {
+  color: var(--main-white-color);
+  background-color: var(--main-black-color);
+}
+
+.next-btn {
+  color: var(--main-white-color);
+  background-color: var(--accent-yellow-color);
 }
 
 .pagination-wrapper {
@@ -389,8 +402,4 @@
   }
 }
 
-/* @media only screen and (min-width: 1440px) { 
-  .pagination-wrepper {
-    gap: 40px;
-  }
- } */
+

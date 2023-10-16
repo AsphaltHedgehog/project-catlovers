@@ -106,7 +106,7 @@ async function bookRender(markup) {
 }
 
 // ====================================================================
-
+// 1
 // async function displayBooksInShoppingList(storedBooks) {
 //   if (!storedBooks.length > 0) {
 //     shoppingListContainer.innerHTML = `<li><p class="text-empty-shop-list">This page is empty, add some books and proceed to order.</p></li><li><img src=${new URL("../images/shop-list/empty-shop-list-bgr.png", import.meta.url)} width="265"
@@ -121,23 +121,26 @@ async function bookRender(markup) {
 //     fetchBooks.bookId = el._id;
     
 //     const data = await fetchBooks.fetchBookId().then(result => result.data);
-async function displayBooksInShoppingList(storedBooks) {
-  if (!storedBooks.length > 0) {
-    lastBookCheck(shoppingListContainer);
-    return;
-    }
-  const renderedBooks = [];
 
-  for (const el of storedBooks) {
-    fetchBooks.bookId = el._id;
 
-    const data = await fetchBooks.fetchBookId().then(result => result.data);
+// 2
+// async function displayBooksInShoppingList(storedBooks) {
+//   if (!storedBooks.length > 0) {
+//     lastBookCheck(shoppingListContainer);
+//     return;
+//     }
+//   const renderedBooks = [];
 
-    renderSavedBooks(data);
-    renderedBooks.push(booksArr);
-  }
-await bookRender(renderedBooks.join(''));
-}
+//   for (const el of storedBooks) {
+//     fetchBooks.bookId = el._id;
+
+//     const data = await fetchBooks.fetchBookId().then(result => result.data);
+
+//     renderSavedBooks(data);
+//     renderedBooks.push(booksArr);
+//   }
+// await bookRender(renderedBooks.join(''));
+// }
 
 
 
@@ -150,10 +153,6 @@ export function lastBookCheck(container) {
       height="198" alt="falling books"/></li>`;
     return;
 };
-
-
-
-
 
 displayBooksInShoppingList(storedBooks);
 
@@ -181,103 +180,120 @@ displayBooksInShoppingList(storedBooks);
 // displayBooksInShoppingList(storedBooks); 
 
 
-// const booksPerPage = 4; 
-// let currentPage = 1;  
-// let startIndex = 0;  
-// let endIndex = booksPerPage;
+const booksPerPage = 4;
+let currentPage = 1;
+let startIndex = 0;
+let endIndex = booksPerPage;
+
+function updatePaginationButtons() {
+  const pageButtons = document.querySelectorAll('.pagination-button');
+
+  pageButtons.forEach((button) => {
+    button.classList.remove('active');
+  });
+
+  document.getElementById(`page${currentPage}`).classList.add('active');
+}
 
 
-// document.getElementById('prevPage').addEventListener('click', () => {
-//   if (currentPage > 1) {
-//     currentPage--;
-//     displayBooksInShoppingList(storedBooks);
-//   }
-// });
+document.getElementById('firstPage').addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage = 1;
+    updatePaginationButtons();
+    displayBooksInShoppingList(storedBooks, currentPage);
+  }
+});
 
-// document.getElementById('page1').addEventListener('click', () => {
-//   // Видалити клас "active" з інших кнопок, якщо вони є
-//   document.getElementById('page2').classList.remove('active');
-//   document.getElementById('page3').classList.remove('active');
+document.getElementById('prevPage').addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage--;
+    updatePaginationButtons(); 
+    displayBooksInShoppingList(storedBooks, currentPage);
+  }
+});
+
+document.getElementById('page1').addEventListener('click', () => {
   
-//   currentPage = 1;
-//   displayBooksInShoppingList(storedBooks);
-// });
-
-// document.getElementById('page2').addEventListener('click', () => {
-//   // Додати клас "active" до другої кнопки
-//   document.getElementById('page2').classList.add('active');
+  document.getElementById('page1').classList.add('active');
+  document.getElementById('page2').classList.remove('active');
+  document.getElementById('page3').classList.remove('active');
   
-//   // Видалити клас "active" з інших кнопок, якщо вони є
-//   document.getElementById('page1').classList.remove('active');
-//   document.getElementById('page3').classList.remove('active');
+  currentPage = 1;
+  displayBooksInShoppingList(storedBooks, currentPage);
+});
+
+document.getElementById('page2').addEventListener('click', () => {
   
-//   currentPage = 2;
-//   displayBooksInShoppingList(storedBooks);
-// });
-
-// document.getElementById('page3').addEventListener('click', () => {
-//   // Додати клас "active" до третьої кнопки
-//   document.getElementById('page3').classList.add('active');
+  document.getElementById('page1').classList.remove('active');
+  document.getElementById('page2').classList.add('active');
+  document.getElementById('page3').classList.remove('active');
   
-//   // Видалити клас "active" з інших кнопок, якщо вони є
-//   document.getElementById('page1').classList.remove('active');
-//   document.getElementById('page2').classList.remove('active');
+  currentPage = 2;
+  displayBooksInShoppingList(storedBooks, currentPage);
+});
+
+document.getElementById('page3').addEventListener('click', () => {
+  document.getElementById('page1').classList.remove('active');
+  document.getElementById('page2').classList.remove('active');
+  document.getElementById('page3').classList.add('active');
   
-//   currentPage = 3;
-//   displayBooksInShoppingList(storedBooks);
-// });
+  currentPage = 3;
+  displayBooksInShoppingList(storedBooks, currentPage);
+});
+
+document.getElementById('nextPage').addEventListener('click', () => {
+  if (endIndex < storedBooks.length) {
+    currentPage += 1;
+    updatePaginationButtons();
+    displayBooksInShoppingList(storedBooks, currentPage);
+  }
+});
+
+document.getElementById('lastPage').addEventListener('click', () => {
+  const totalPages = Math.ceil(storedBooks.length / booksPerPage);
+  if (currentPage < totalPages) {
+    currentPage = totalPages;
+    updatePaginationButtons();
+    displayBooksInShoppingList(storedBooks, currentPage);
+  }
+});
 
 
-// document.getElementById('nextPage').addEventListener('click', () => {
-//   if (endIndex < storedBooks.length) {
-//     currentPage += 1;
-//     displayBooksInShoppingList(storedBooks);
-//   }
-// });
+async function displayBooksInShoppingList(storedBooks, page = 1) {
+  if (!storedBooks.length) {
+    shoppingListContainer.innerHTML = `<li><p class="text-empty-shop-list">This page is empty, add some books and proceed to order.</p></li><li><img src=${new URL("../images/shop-list/empty-shop-list-bgr.png", import.meta.url)} width="265" height="198" alt="падаючі книги"/></li>`;
+    updatePaginationVisibility();
+    return;
+  }
 
-// function updatePaginationButtons() {
-//   // Отримайте всі кнопки сторінок
-//   const pageButtons = document.querySelectorAll('.pagination-button');
-  
-//   // Перевірте кожну кнопку та встановіть/видаліть клас "active" відповідно до активної сторінки
-//   pageButtons.forEach((button, index) => {
-//     if (currentPage === index + 1) {
-//       button.classList.add('active');
-//     } else {
-//       button.classList.remove('active');
-//     }
-//   });
-// }
+  startIndex = (page - 1) * booksPerPage;
+  endIndex = startIndex + booksPerPage;
 
+  const renderedBooks = [];
 
-// async function displayBooksInShoppingList(storedBooks) {
-//   if (!storedBooks.length) {
-//     shoppingListContainer.innerHTML = `<li><p class="text-empty-shop-list">This page is empty, add some books and proceed to order.</p></li><li><img src=${new URL("../images/shop-list/empty-shop-list-bgr.png", import.meta.url)} width="265" height="198" alt="падаючі книги"/></li>`;
-//     return;
-//   }
+  for (let i = startIndex; i < endIndex && i < storedBooks.length; i += 1) {
+    const el = storedBooks[i];
+    fetchBooks.bookId = el._id;
+    const data = await fetchBooks.fetchBookId().then((result) => result.data);
+    renderSavedBooks(data);
+    renderedBooks.push(booksArr);
+  }
 
-//   startIndex = (currentPage - 1) * booksPerPage;
-//   endIndex = startIndex + booksPerPage;
+  await bookRender(renderedBooks.join(''));
 
-//   const renderedBooks = [];
+  currentPage = page; 
+  updatePaginationButtons();
+}
 
-//   for (let i = startIndex; i < endIndex && i < storedBooks.length; i += 1) {
-//     const el = storedBooks[i];
-//     fetchBooks.bookId = el._id;
-//     const data = await fetchBooks.fetchBookId().then((result) => result.data);
-//     renderSavedBooks(data);
-//     renderedBooks.push(booksArr);
-//   }
+function updatePaginationVisibility() {
+  const pagination = document.querySelector('.pagination');
+  if (storedBooks.length > 4) {
+    pagination.style.display = 'block';
+  } else {
+    pagination.style.display = 'none';
+  }
+}
 
-//   await bookRender(renderedBooks.join(''));
-  
-//   currentPage = pageToDisplay;
-//   updatePaginationButtons();
-// }
+displayBooksInShoppingList(storedBooks);
 
-
-// const pageToDisplay = 1;
-
-// displayBooksInShoppingList(storedBooks);
-// pageToDisplay
 
